@@ -1,0 +1,16 @@
+//
+//  TrainPrefix.pch
+//  SOHUTrain
+//
+//  Created by apple on 16/8/26.
+//  Copyright © 2016年  Kingno. All rights reserved.
+//
+
+#ifndef TrainPrefix_pch
+#define TrainPrefix_pch
+
+
+#import "TrainMacroDefine.h"
+
+
+#endif /* TrainPrefix_pch */
