@@ -415,61 +415,61 @@
 }
 - (void)setScalesPageToFit:(BOOL)scalesPageToFit
 {
-    if (_usingUIWebView) {
-        UIWebView* webView = _realWebView;
-        webView.scalesPageToFit = scalesPageToFit;
-    }
-    else {
-        if (_scalesPageToFit == scalesPageToFit) {
-            return;
-        }
-
-        WKWebView* webView = _realWebView;
-
-        NSString* jScript =
-        @"var head = document.getElementsByTagName('head')[0];\
-        var hasViewPort = 0;\
-        var metas = head.getElementsByTagName('meta');\
-        for (var i = metas.length; i>=0 ; i--) {\
-            var m = metas[i];\
-            if (m.name == 'viewport') {\
-                hasViewPort = 1;\
-                break;\
-            }\
-        }; \
-        if(hasViewPort == 0) { \
-            var meta = document.createElement('meta'); \
-            meta.name = 'viewport'; \
-            meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'; \
-            head.appendChild(meta);\
-        }";
-        
-        WKUserContentController *userContentController = webView.configuration.userContentController;
-        NSMutableArray<WKUserScript *> *array = [userContentController.userScripts mutableCopy];
-        WKUserScript* fitWKUScript = nil;
-        for (WKUserScript* wkUScript in array) {
-            if ([wkUScript.source isEqual:jScript]) {
-                fitWKUScript = wkUScript;
-                break;
-            }
-        }
-        if (scalesPageToFit) {
-            if (!fitWKUScript) {
-                fitWKUScript = [[NSClassFromString(@"WKUserScript") alloc] initWithSource:jScript injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO];
-                [userContentController addUserScript:fitWKUScript];
-            }
-        }
-        else {
-            if (fitWKUScript) {
-                [array removeObject:fitWKUScript];
-            }
-            ///没法修改数组 只能移除全部 再重新添加
-            [userContentController removeAllUserScripts];
-            for (WKUserScript* wkUScript in array) {
-                [userContentController addUserScript:wkUScript];
-            }
-        }
-    }
+//    if (_usingUIWebView) {
+//        UIWebView* webView = _realWebView;
+//        webView.scalesPageToFit = scalesPageToFit;
+//    }
+//    else {
+//        if (_scalesPageToFit == scalesPageToFit) {
+//            return;
+//        }
+//
+//        WKWebView* webView = _realWebView;
+//
+//        NSString* jScript =
+//        @"var head = document.getElementsByTagName('head')[0];\
+//        var hasViewPort = 0;\
+//        var metas = head.getElementsByTagName('meta');\
+//        for (var i = metas.length; i>=0 ; i--) {\
+//            var m = metas[i];\
+//            if (m.name == 'viewport') {\
+//                hasViewPort = 1;\
+//                break;\
+//            }\
+//        }; \
+//        if(hasViewPort == 0) { \
+//            var meta = document.createElement('meta'); \
+//            meta.name = 'viewport'; \
+//            meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'; \
+//            head.appendChild(meta);\
+//        }";
+//        
+//        WKUserContentController *userContentController = webView.configuration.userContentController;
+//        NSMutableArray<WKUserScript *> *array = [userContentController.userScripts mutableCopy];
+//        WKUserScript* fitWKUScript = nil;
+//        for (WKUserScript* wkUScript in array) {
+//            if ([wkUScript.source isEqual:jScript]) {
+//                fitWKUScript = wkUScript;
+//                break;
+//            }
+//        }
+//        if (scalesPageToFit) {
+//            if (!fitWKUScript) {
+//                fitWKUScript = [[NSClassFromString(@"WKUserScript") alloc] initWithSource:jScript injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO];
+//                [userContentController addUserScript:fitWKUScript];
+//            }
+//        }
+//        else {
+//            if (fitWKUScript) {
+//                [array removeObject:fitWKUScript];
+//            }
+//            ///没法修改数组 只能移除全部 再重新添加
+//            [userContentController removeAllUserScripts];
+//            for (WKUserScript* wkUScript in array) {
+//                [userContentController addUserScript:wkUScript];
+//            }
+//        }
+//    }
     _scalesPageToFit = scalesPageToFit;
 }
 - (BOOL)scalesPageToFit

@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KindeeTrain/TrainClass/TrainClassCourse/TrainMoviePlayer/TrainMovieDetailTableViewController.m"
-            timestampString = "548313885.388414"
+            timestampString = "551506533.365309"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
+            startingLineNumber = "326"
+            endingLineNumber = "326"
             landmarkName = "-startLearnHour"
             landmarkType = "7">
          </BreakpointContent>
@@ -169,13 +169,13 @@
                   symbolName = "__49-[TrainCacheCourseListViewController detelleCell]_block_invoke_2"
                   moduleName = "KindeeTrain"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Documents/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6%E5%A4%B9/%E4%BA%A7%E5%93%81/APp/KindeeTrain/KindeeTrain/TrainClass/TrainCache/TrainController/TrainCacheCourseListViewController.m"
-                  timestampString = "549386293.634033"
+                  urlString = "file:///Users/admin/Documents/learnProject/123Project/learnApp/KindeeTrain/TrainClass/TrainCache/TrainController/TrainCacheCourseListViewController.m"
+                  timestampString = "551614386.564142"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "252"
                   endingLineNumber = "252"
-                  offsetFromSymbolStart = "753">
+                  offsetFromSymbolStart = "752">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -184,13 +184,13 @@
                   symbolName = "__copy_helper_block_.182"
                   moduleName = "KindeeTrain"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Documents/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6%E5%A4%B9/%E4%BA%A7%E5%93%81/APp/KindeeTrain/KindeeTrain/TrainClass/TrainCache/TrainController/TrainCacheCourseListViewController.m"
-                  timestampString = "549386293.636585"
+                  urlString = "file:///Users/admin/Documents/learnProject/123Project/learnApp/KindeeTrain/TrainClass/TrainCache/TrainController/TrainCacheCourseListViewController.m"
+                  timestampString = "551614386.56671"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "215"
                   endingLineNumber = "215"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "24">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KindeeTrain/TrainClass/TrainClassCourse/TrainController/TrainClassDetailViewController.m"
-            timestampString = "542340815.083953"
+            timestampString = "551022993.5673569"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
@@ -218,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KindeeTrain/TrainClass/TrainClassCourse/TrainMoviePlayer/TrainMoviePlayerViewController.m"
-            timestampString = "548177645.8326139"
+            timestampString = "551504850.9905109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2192"
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KindeeTrain/TrainClass/TrainClassCourse/TrainMoviePlayer/TrainNewMovieViewController.m"
-            timestampString = "549386293.509371"
+            timestampString = "551506533.365605"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "995"
-            endingLineNumber = "995"
+            startingLineNumber = "860"
+            endingLineNumber = "860"
             landmarkName = "-updateStudyTime"
             landmarkType = "7">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KindeeTrain/TrainClass/TrainClassCourse/TrainMoviePlayer/TrainMovieDetailTableViewController.m"
-            timestampString = "548313885.389882"
+            timestampString = "551506533.365697"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "301"
-            endingLineNumber = "301"
+            startingLineNumber = "307"
+            endingLineNumber = "307"
             landmarkName = "-startLearnHour"
             landmarkType = "7">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KindeeTrain/TrainClass/TrainClassCourse/TrainMoviePlayer/TrainMovieDetailTableViewController.m"
-            timestampString = "548313885.390528"
+            timestampString = "551506533.365772"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1815"
-            endingLineNumber = "1815"
+            startingLineNumber = "1820"
+            endingLineNumber = "1820"
             landmarkName = "-autoPlayHour"
             landmarkType = "7">
             <Locations>
@@ -281,13 +281,13 @@
                   symbolName = "-[TrainMovieDetailTableViewController autoPlayHour]"
                   moduleName = "KindeeTrain"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Documents/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6%E5%A4%B9/%E4%BA%A7%E5%93%81/APp/KindeeTrain/KindeeTrain/TrainClass/TrainClassCourse/TrainMoviePlayer/TrainMovieDetailTableViewController.m"
-                  timestampString = "549386293.654887"
+                  urlString = "file:///Users/admin/Documents/learnProject/123Project/learnApp/KindeeTrain/TrainClass/TrainClassCourse/TrainMoviePlayer/TrainMovieDetailTableViewController.m"
+                  timestampString = "551614386.580911"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1816"
-                  endingLineNumber = "1816"
-                  offsetFromSymbolStart = "2828">
+                  startingLineNumber = "1821"
+                  endingLineNumber = "1821"
+                  offsetFromSymbolStart = "2396">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -296,13 +296,13 @@
                   symbolName = "-[TrainMovieDetailTableViewController autoPlayHour]"
                   moduleName = "KindeeTrain"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Documents/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6%E5%A4%B9/%E4%BA%A7%E5%93%81/APp/KindeeTrain/KindeeTrain/TrainClass/TrainClassCourse/TrainMoviePlayer/TrainMovieDetailTableViewController.m"
-                  timestampString = "549386293.658391"
+                  urlString = "file:///Users/admin/Documents/learnProject/123Project/learnApp/KindeeTrain/TrainClass/TrainClassCourse/TrainMoviePlayer/TrainMovieDetailTableViewController.m"
+                  timestampString = "551614386.583382"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1816"
-                  endingLineNumber = "1816"
-                  offsetFromSymbolStart = "2896">
+                  startingLineNumber = "1821"
+                  endingLineNumber = "1821"
+                  offsetFromSymbolStart = "2452">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -314,12 +314,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KindeeTrain/TrainClass/TrainClassCourse/TrainMoviePlayer/TrainMovieDetailTableViewController.m"
-            timestampString = "548313885.3917511"
+            timestampString = "551506533.365841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1806"
-            endingLineNumber = "1806"
+            startingLineNumber = "1811"
+            endingLineNumber = "1811"
             landmarkName = "-autoPlayHour"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KindeeTrain/TrainClass/TrainClassCourse/TrainMoviePlayer/TrainNewMovieViewController.m"
+            timestampString = "551506533.365912"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "559"
+            endingLineNumber = "559"
+            landmarkName = "-pageController:didEnterViewController:withInfo:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KindeeTrain/TrainClass/TrainClassCourse/TrainMoviePlayer/TrainNewMovieViewController.m"
+            timestampString = "551506533.365976"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "595"
+            endingLineNumber = "595"
+            landmarkName = "-playerHour:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KindeeTrain/TrainClass/TrainClassCourse/TrainMoviePlayer/TrainMovieDetailTableViewController.m"
+            timestampString = "551506533.36604"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1837"
+            endingLineNumber = "1837"
+            landmarkName = "-playerWithHour:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KindeeTrain/TrainClass/TrainClassCourse/TrainMoviePlayer/TrainMovieDetailTableViewController.m"
+            timestampString = "551506533.366107"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1833"
+            endingLineNumber = "1833"
+            landmarkName = "-playerWithHour:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

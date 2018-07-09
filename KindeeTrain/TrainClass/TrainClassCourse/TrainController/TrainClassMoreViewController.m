@@ -31,21 +31,29 @@
         status = TrainClassDetailStatusStudent;
     }else if ([_navTitle isEqualToString:@"班级评价"] ) {
         status = TrainClassDetailStatusAppraise;
+    }else if ([_navTitle isEqualToString:@"班级学员"]) {
+        status = TrainClassDetailStatusMates ;
     }
     [self creatTableView];
-    [self downLoadCouseAndClassData:1];
 
     
     // Do any additional setup after loading the view.
 }
 -(void)creatTableView{
-    moreTableView =[[TrainBaseTableView alloc]initWithFrame:CGRectMake(0, TrainNavorigin_y, TrainSCREENWIDTH, TrainSCREENHEIGHT - TrainNavHeight) andTableStatus:tableViewRefreshFooter];
+    
+    moreTableView =[[TrainBaseTableView alloc]initWithFrame:CGRectMake(0, TrainNavorigin_y, TrainSCREENWIDTH, TrainSCREENHEIGHT - TrainNavHeight) andTableStatus:tableViewRefreshAll];
     [self.view addSubview:moreTableView];
     moreTableView.delegate = self;
     moreTableView.dataSource = self;
     moreTableView.rowHeight = 60;
     [moreTableView registerClass:[TrainClassDetailCell class] forCellReuseIdentifier:@"morecell"];
     TrainWeakSelf(self);
+    
+    moreTableView.headBlock = ^{
+        [weakself downLoadCouseAndClassData:1];
+
+    };
+    
     moreTableView.footBlock=^(int  index){
         __strong __typeof(weakself)strongSelf = weakself;
         [strongSelf downLoadCouseAndClassData:index];
@@ -62,37 +70,77 @@
     [self trainShowHUDOnlyActivity];
     [moreTableView dissTablePlace];
     
-    
-    [[TrainNetWorkAPIClient client] trainClassDetailMoreWithdetailMode:status class_id:_class_id curPage:index Success:^(NSDictionary *dic) {
-        if (index == 1) {
-            detaliMuarr =[NSMutableArray array];
-        }
-        NSArray  *dataArr = [NSArray new];
-        if (status == TrainClassDetailStatusTeacher) {
-            dataArr =[TrainClassUserModel  mj_objectArrayWithKeyValuesArray:dic[@"person"]];
+    if (status == TrainClassDetailStatusMates) {
+        
+        [[TrainNetWorkAPIClient client] trainClassMatesListWithClass_id:self.class_id pageNum:index Success:^(NSDictionary *dic) {
             
-        }else  if (status == TrainClassDetailStatusStudent) {
-            dataArr =[TrainClassUserModel  mj_objectArrayWithKeyValuesArray:dic[@"person"]];
-        }
+            if (index == 1) {
+                detaliMuarr =[NSMutableArray array];
+            }
+            NSArray  *dataArr = [NSArray new];
+            if (status == TrainClassDetailStatusTeacher) {
+                dataArr =[TrainClassUserModel  mj_objectArrayWithKeyValuesArray:dic[@"person"]];
+                
+            }else  if (status == TrainClassDetailStatusStudent) {
+                dataArr =[TrainClassUserModel  mj_objectArrayWithKeyValuesArray:dic[@"person"]];
+            }
+            
+            [detaliMuarr addObjectsFromArray:dataArr];
+            
+            if (detaliMuarr.count>0) {
+                TrainClassUserModel *model =[detaliMuarr firstObject];
+                moreTableView.totalpages =[model.totPage intValue];
+            }
+            
+            moreTableView.trainMode = trainStyleNoData;
+            [moreTableView EndRefresh];
+            [self trainHideHUD];
+            
+            
+        } andFailure:^(NSInteger errorCode, NSString *errorMsg) {
+           
+            moreTableView.trainMode = trainStyleNoNet;
+            [moreTableView EndRefresh];
+            [self trainShowHUDNetWorkError];
+            
+        }];
         
-        [detaliMuarr addObjectsFromArray:dataArr];
+    }else {
         
-        if (detaliMuarr.count>0) {
-            TrainClassUserModel *model =[detaliMuarr firstObject];
-            moreTableView.totalpages =[model.totPage intValue];
-        }
+        [[TrainNetWorkAPIClient client] trainClassDetailMoreWithdetailMode:status class_id:_class_id curPage:index Success:^(NSDictionary *dic) {
+            if (index == 1) {
+                detaliMuarr =[NSMutableArray array];
+            }
+            NSArray  *dataArr = [NSArray new];
+            if (status == TrainClassDetailStatusTeacher) {
+                dataArr =[TrainClassUserModel  mj_objectArrayWithKeyValuesArray:dic[@"person"]];
+                
+            }else  if (status == TrainClassDetailStatusStudent) {
+                dataArr =[TrainClassUserModel  mj_objectArrayWithKeyValuesArray:dic[@"person"]];
+            }
+            
+            [detaliMuarr addObjectsFromArray:dataArr];
+            
+            if (detaliMuarr.count>0) {
+                TrainClassUserModel *model =[detaliMuarr firstObject];
+                moreTableView.totalpages =[model.totPage intValue];
+            }
+            
+            moreTableView.trainMode = trainStyleNoData;
+            [moreTableView EndRefresh];
+            [self trainHideHUD];
+            
+            
+        } andFailure:^(NSInteger errorCode, NSString *errorMsg) {
+            moreTableView.trainMode = trainStyleNoNet;
+            [moreTableView EndRefresh];
+            [self trainShowHUDNetWorkError];
+        }];
         
-        moreTableView.trainMode = trainStyleNoData;
-        [moreTableView EndRefresh];
-        [self trainHideHUD];
-        
-
-    } andFailure:^(NSInteger errorCode, NSString *errorMsg) {
-        moreTableView.trainMode = trainStyleNoNet;
-        [moreTableView EndRefresh];
-        [self trainShowHUDNetWorkError];
-    }];
     }
+    
+    
+}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return (TrainArrayIsEmpty(detaliMuarr))?0:detaliMuarr.count;

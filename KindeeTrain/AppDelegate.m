@@ -43,10 +43,10 @@
     
 
     [TrainUserDefault setBool:NO forKey:TrainAllowRe];
-    
+
     TrainNavigationController *nav =[[TrainNavigationController alloc]initWithRootViewController:[TrainWelcomeViewController new]];
     self.window.rootViewController = nav;
-    
+
 
     // Override point for customization after application launch.
     return YES;

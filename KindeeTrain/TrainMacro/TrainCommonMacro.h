@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger){
     TrainModeClass      = 1,
     TrainModeMyCourse   = 2,
     TrainModeMyClass    = 3,
-    TrainModeMyNotClass    = 4
+    TrainModeMyNotClass    = 4  
 
 }TrainMode;
 
@@ -94,7 +94,8 @@ typedef NS_ENUM(NSInteger){
     
     TrainClassDetailStatusTeacher =1,
     TrainClassDetailStatusStudent,
-    TrainClassDetailStatusAppraise
+    TrainClassDetailStatusAppraise ,
+    TrainClassDetailStatusMates
     
 }TrainClassDetailStatus;
 

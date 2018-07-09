@@ -221,6 +221,45 @@
 
 +(NSString *)trainClass;
 
+/**
+ * 班级 成绩策略
+ */
++(NSString *)trainClassGradeInfo;
+
+/**
+ * 获取班级阶段
+ */
++(NSString *)trainClassPhaseInfo ;
+
+/**
+ * 获取阶段资源
+ */
++(NSString *)trainClassPhaseRes ;
+
+/**
+ * 班级评论列表
+ */
++(NSString *)trainClassCommendList ;
+
+
+/**
+ * 添加班级评价
+ */
++(NSString *)trainAddClassCommend ;
+
+/**
+ * 获取阶段课时
+ */
++(NSString *)trainClassPhaseHourList ;
+
+/**
+ * 班级 详情 更多学员
+ */
++(NSString *)trainClassAllMates ;
+/**
+ * 班级 收藏
+ */
++(NSString *)trainClassCollect ;
 
 +(NSString *)trainMyClassNotRegister;
 

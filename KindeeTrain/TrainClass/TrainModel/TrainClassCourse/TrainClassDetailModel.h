@@ -41,8 +41,6 @@
 
 @end
 
-
-
 @interface TrainClassCourseModel : TrainBaseModel
 
 @property(nonatomic,copy) NSString  *c_id;

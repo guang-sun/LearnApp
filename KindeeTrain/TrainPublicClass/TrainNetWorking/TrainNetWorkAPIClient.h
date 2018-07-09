@@ -402,6 +402,83 @@
 
 
 /**
+ 班级成绩策略
+ */
+- (void)trainClassGradeInfoWithClass_id:(NSString *)class_id
+                              tactic_id:(NSString *)tactic_id
+                                Success:(defaultSuccessBlock)success
+                             andFailure:(defaultFailureBlock)failure ;
+
+
+
+/**
+ 班级获取班级阶段
+ */
+- (void)trainClassphaseInfoWithClass_id:(NSString *)class_id
+                                Success:(defaultSuccessBlock)success
+                             andFailure:(defaultFailureBlock)failure  ;
+
+/**
+ *
+ * 获取阶段资源
+ */
+- (void)trainClassphaseResoureWithClass_id:(NSString *)class_id
+                                    sec_id:(NSString *)sec_id
+                                   Success:(defaultSuccessBlock)success
+                                andFailure:(defaultFailureBlock)failure ;
+
+
+/**
+ *
+ * 获取班级评论列表
+ */
+- (void)trainClassCommentListWithClass_id:(NSString *)class_id
+                                    grade:(NSInteger )grade
+                                  pageNum:(NSInteger )pageNum
+                                  Success:(defaultSuccessBlock)success
+                               andFailure:(defaultFailureBlock)failure ;
+
+/**
+ *
+ * 添加班级评价
+ */
+- (void)trainAddClassCommentWithClass_id:(NSString *)class_id
+                                   grade:(NSString *)grade
+                                 content:(NSString *)content
+                                 Success:(defaultSuccessBlock)success
+                              andFailure:(defaultFailureBlock)failure  ;
+
+/**
+ *
+ * 获取阶段资源
+ */
+- (void)trainClassPhaseHourListWithClass_id:(NSString *)class_id
+                                       c_id:(NSString *)c_id
+                                    room_id:(NSString *)room_id
+                                    Success:(defaultSuccessBlock)success
+                                 andFailure:(defaultFailureBlock)failure ;
+
+/**
+ *
+ * 获取班级同学
+ */
+- (void)trainClassMatesListWithClass_id:(NSString *)class_id
+                                pageNum:(NSInteger )pageNum
+                                Success:(defaultSuccessBlock)success
+                             andFailure:(defaultFailureBlock)failure  ;
+
+/**
+ *
+ * 班级双收藏
+ */
+- (void)trainClassCollectWithClass_id:(NSString *)class_id
+                            iscollect:(BOOL )iscollect
+                              Success:(defaultSuccessBlock)success
+                           andFailure:(defaultFailureBlock)failure ;
+
+
+
+/**
  班级 报名 -->报名 or 取消报名
  
  @param isRegister 报名 or 取消报名

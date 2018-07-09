@@ -28,6 +28,7 @@
 #import "UIView+TrainLineView.h"
 #import "UISegmentedControl+Train.h"
 #import "UIViewController+ZFPlayerRotation.h"
+#import "UIView+RZNib.h"
 
 // 工具
 #import <Reachability/Reachability.h>
@@ -38,6 +39,8 @@
 #import "TrainBaseNavBarController.h"
 #import "TrainNavigationController.h"
 #import "TrainClassMenuView.h"
+#import "Masonry.h"
+
 // 设置
 #import "TrainPromptStr.h"
 #import "TrainCommonMacro.h"
@@ -64,6 +67,7 @@
 #define TrainiPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 #define TrainiPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
 #define TrainiPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+#define TrainiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
 
 
@@ -77,11 +81,14 @@
 #define TrainMarginWidth          15.0f
 #define TrainCLASSHEIGHT          40.0f
 #define TrainAlertOff_y           100.0f
-#define TrainNavHeight            64.0f
+//#define TrainNavHeight         64.0f
 #define TrainNavorigin_y          0.0f
-#define TrainTabbarHeight         49.0f
+//#define TrainTabbarHeight         49.0f
 
-#define trainIconWidth            50.0f
+#define  TrainSafeArea                  (TrainiPhoneX ? 34.0f : 0.0f)
+#define  TrainNavHeight                 (TrainiPhoneX ? 88.0f : 64.0f)
+#define  TrainTabbarHeight              (TrainiPhoneX ? 83.0f : 49.0f) //  49.0f
+#define trainIconWidth               50.0f
 
 
 

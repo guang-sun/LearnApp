@@ -794,22 +794,198 @@
                                   andFailure:(defaultFailureBlock)failure{
     
     NSString *urlPath  = @"";
+    NSMutableDictionary  *params = [NSMutableDictionary  dictionaryWithCapacity:1];
+    NSDictionary  *dic ;
     if(isClass){
         urlPath =[self trainCreatBaseURL:[TrainNetWorkConfiguration trainClassCourseDeleteAppraise]];
-        
+        [params setObject:notEmptyStr(Appraise_id) forKey:@"comment.object_id"];
+       dic = [self trainAddCommonParameters:params andUserName:@"comment.create_by"];
+
     }else{
         
         urlPath =[self trainCreatBaseURL:[TrainNetWorkConfiguration trainCourseDeleteAppraise]];
+        
+        [params setObject:notEmptyStr(Appraise_id) forKey:@"id"];
+        dic = [self trainAddCommonParameters:params andUserName:nil];
     }
-    NSDictionary  *infoDic = [NSDictionary dictionaryWithObject:notEmptyStr(Appraise_id) forKey:@"id"];
+    [self trainBaseNetWorkWithURl:urlPath parameters:dic Success:success andFailure:failure];
+}
+
+/**
+ 班级成绩策略
+ */
+- (void)trainClassGradeInfoWithClass_id:(NSString *)class_id
+                              tactic_id:(NSString *)tactic_id
+                                Success:(defaultSuccessBlock)success
+                             andFailure:(defaultFailureBlock)failure {
     
-    NSDictionary  *dic = [self trainAddCommonParameters:infoDic andUserName:nil];
+    
+    NSString *urlPath  = [self trainCreatBaseURL:[TrainNetWorkConfiguration trainClassGradeInfo]];
+    NSMutableDictionary  *mudic = [NSMutableDictionary dictionary];
+    [mudic setObject:notEmptyStr(class_id) forKey:@"cls.id"];
+    [mudic setObject:notEmptyStr(tactic_id) forKey:@"cls.tactic_id"];
+    
+    NSDictionary  *dic = [self trainAddCommonParameters:mudic andUserName:nil];
     
     [self trainBaseNetWorkWithURl:urlPath parameters:dic Success:success andFailure:failure];
+    
+}
 
+/**
+ 班级获取班级阶段
+ */
+- (void)trainClassphaseInfoWithClass_id:(NSString *)class_id
+                                Success:(defaultSuccessBlock)success
+                             andFailure:(defaultFailureBlock)failure {
     
     
+    NSString *urlPath  = [self trainCreatBaseURL:[TrainNetWorkConfiguration trainClassPhaseInfo]];
+    NSMutableDictionary  *mudic = [NSMutableDictionary dictionary];
+    [mudic setObject:notEmptyStr(class_id) forKey:@"cls.id"];
     
+    NSDictionary  *dic = [self trainAddCommonParameters:mudic andUserName:nil];
+    
+    [self trainBaseNetWorkWithURl:urlPath parameters:dic Success:success andFailure:failure];
+    
+}
+
+/**
+ *
+ * 获取阶段资源
+ */
+- (void)trainClassphaseResoureWithClass_id:(NSString *)class_id
+                                 sec_id:(NSString *)sec_id
+                                Success:(defaultSuccessBlock)success
+                             andFailure:(defaultFailureBlock)failure {
+    
+    
+    NSString *urlPath  = [self trainCreatBaseURL:[TrainNetWorkConfiguration trainClassPhaseRes]];
+    NSMutableDictionary  *mudic = [NSMutableDictionary dictionary];
+    [mudic setObject:notEmptyStr(class_id) forKey:@"cls.id"];
+    [mudic setObject:notEmptyStr(sec_id) forKey:@"cls.sec_id"];
+
+    NSDictionary  *dic = [self trainAddCommonParameters:mudic andUserName:@"cls.user_id"];
+    
+    [self trainBaseNetWorkWithURl:urlPath parameters:dic Success:success andFailure:failure];
+    
+}
+/**
+ *
+ * 获取阶段资源
+ */
+- (void)trainClassPhaseHourListWithClass_id:(NSString *)class_id
+                                     c_id:(NSString *)c_id
+                                     room_id:(NSString *)room_id
+                                   Success:(defaultSuccessBlock)success
+                                andFailure:(defaultFailureBlock)failure {
+    
+    
+    NSString *urlPath  = [self trainCreatBaseURL:[TrainNetWorkConfiguration trainClassPhaseHourList]];
+    NSMutableDictionary  *mudic = [NSMutableDictionary dictionary];
+    [mudic setObject:notEmptyStr(class_id) forKey:@"object_id"];
+    [mudic setObject:notEmptyStr(c_id) forKey:@"c_id"];
+    [mudic setObject:notEmptyStr(room_id) forKey:@"room_id"];
+    [mudic setObject:notEmptyStr(@"class") forKey:@"from"];
+
+    NSDictionary  *dic = [self trainAddCommonParameters:mudic andUserName:@"user_id"];
+    
+    [self trainBaseNetWorkWithURl:urlPath parameters:dic Success:success andFailure:failure];
+    
+}
+
+/**
+ *
+ * 获取班级评论列表
+ */
+- (void)trainClassCommentListWithClass_id:(NSString *)class_id
+                                    grade:(NSInteger )grade
+                                  pageNum:(NSInteger )pageNum
+                                   Success:(defaultSuccessBlock)success
+                                andFailure:(defaultFailureBlock)failure {
+    
+    NSString *urlPath  = [self trainCreatBaseURL:[TrainNetWorkConfiguration trainClassCommendList]];
+    NSMutableDictionary  *mudic = [NSMutableDictionary dictionary];
+    [mudic setObject:notEmptyStr(class_id) forKey:@"class_id"];
+    
+    NSString  *gradeType = [NSString stringWithFormat:@"%zi",grade];
+    [mudic setObject:gradeType forKey:@"grade_type"];
+    
+    NSString *cur = [NSString stringWithFormat:@"%ld",(long)pageNum];
+    [mudic setObject:cur forKey:@"curPage"];
+    
+    NSDictionary  *dic = [self trainAddCommonParameters:mudic andUserName:@"user_id"];
+    
+    [self trainBaseNetWorkWithURl:urlPath parameters:dic Success:success andFailure:failure];
+    
+}
+
+/**
+ *
+ * 添加班级评价
+ */
+- (void)trainAddClassCommentWithClass_id:(NSString *)class_id
+                                    grade:(NSString *)grade
+                                  content:(NSString *)content
+                                  Success:(defaultSuccessBlock)success
+                               andFailure:(defaultFailureBlock)failure {
+    
+    NSString *urlPath  = [self trainCreatBaseURL:[TrainNetWorkConfiguration trainAddClassCommend]];
+    NSMutableDictionary  *mudic = [NSMutableDictionary dictionary];
+    [mudic setObject:notEmptyStr(class_id) forKey:@"object_id"];
+    [mudic setObject:notEmptyStr(grade) forKey:@"grade"];
+    [mudic setObject:notEmptyStr(content) forKey:@"content"];
+    
+    NSDictionary  *dic = [self trainAddCommonParameters:mudic andUserName:@"user_id"];
+    [self trainBaseNetWorkWithURl:urlPath parameters:dic Success:success andFailure:failure];
+    
+}
+
+
+
+/**
+ *
+ * 获取班级同学
+ */
+- (void)trainClassMatesListWithClass_id:(NSString *)class_id
+                                pageNum:(NSInteger )pageNum
+                                Success:(defaultSuccessBlock)success
+                             andFailure:(defaultFailureBlock)failure {
+    
+    NSString *urlPath  = [self trainCreatBaseURL:[TrainNetWorkConfiguration trainClassAllMates]];
+    NSMutableDictionary  *mudic = [NSMutableDictionary dictionary];
+    [mudic setObject:notEmptyStr(class_id) forKey:@"cls.id"];
+    
+    NSString *cur = [NSString stringWithFormat:@"%ld",(long)pageNum];
+    [mudic setObject:cur forKey:@"cls.curPage"];
+    
+    NSDictionary  *dic = [self trainAddCommonParameters:mudic andUserName:nil];
+    
+    [self trainBaseNetWorkWithURl:urlPath parameters:dic Success:success andFailure:failure];
+    
+}
+
+/**
+ *
+ * 班级双收藏
+ */
+- (void)trainClassCollectWithClass_id:(NSString *)class_id
+                            iscollect:(BOOL )iscollect
+                            Success:(defaultSuccessBlock)success
+                        andFailure:(defaultFailureBlock)failure {
+    
+    
+    NSString *urlPath  = [self trainCreatBaseURL:[TrainNetWorkConfiguration trainClassCollect]];
+    NSMutableDictionary  *mudic = [NSMutableDictionary dictionary];
+    [mudic setObject:notEmptyStr(class_id) forKey:@"class_id"];
+    
+    if (iscollect) {
+        [mudic setObject:notEmptyStr(@"add") forKey:@"fav_type"];
+    }else {
+        [mudic setObject:notEmptyStr(@"del") forKey:@"fav_type"];
+    }
+    NSDictionary  *dic = [self trainAddCommonParameters:mudic andUserName:@"user_id"];
+    
+    [self trainBaseNetWorkWithURl:urlPath parameters:dic Success:success andFailure:failure];
 }
 
 - (void)trainClassDetailWithClassMode:(TrainClassMode )classMode

@@ -70,18 +70,6 @@
 
 -(void)trainShowHUDOnlyActivity{
     
-    
-//    NSMutableArray   *muarr = [NSMutableArray array];
-//    for (int i = 1; i<=12; i++) {
-//        
-//        NSString  *imageName = [NSString stringWithFormat:@"Newmain_refresh_%d",i];
-//        UIImage *image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        
-//        UIImage  *newImage = [UIImage OriginImage:image scaleToSize:CGSizeMake(60, 60)];
-//        [muarr addObject:newImage];
-//    }
-    
-//    [TrainProgressHUD showCustomAnimation:@"加载中……" withImgArry:muarr inview:self.view];
     UIWindow *view = [[UIApplication sharedApplication].windows lastObject];
     [TrainProgressHUD showCustomAnimation:@"加载中……" withImgArry:@[] inview:view];
 }

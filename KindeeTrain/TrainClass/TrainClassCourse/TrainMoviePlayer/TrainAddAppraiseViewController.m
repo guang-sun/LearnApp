@@ -196,13 +196,25 @@
 
 -(void)saveAppraise{
     
+    NSString  *gradeText ;
+    NSString  *messageText ;
+    if (self.isclass) {
+        gradeText = @"为此班级打个分" ;
+        messageText = @"为此课程说两句" ;
+    }else {
+        gradeText = @"为此课程打个分" ;
+        messageText = @"为此班级说两句" ;
+
+    }
+    
     if (grade==0)
     {
-        [TrainAlertTools showTipAlertViewWith:self title:@"提示" message:@"为此课程打个分" buttonTitle:@"去打分" buttonStyle:TrainAlertActionStyleCancel];
+        [TrainAlertTools showTipAlertViewWith:self title:@"提示" message:gradeText buttonTitle:@"去打分" buttonStyle:TrainAlertActionStyleCancel];
         return;
+        
     }else if ([TrainStringUtil trainIsBlankString:appraiseTextView.text]){
        
-         [TrainAlertTools showTipAlertViewWith:self title:@"提示" message:@"为此课程说两句" buttonTitle:@"说两句" buttonStyle:TrainAlertActionStyleCancel];
+         [TrainAlertTools showTipAlertViewWith:self title:@"提示" message:messageText buttonTitle:@"说两句" buttonStyle:TrainAlertActionStyleCancel];
        
         return;
     }
@@ -215,35 +227,55 @@
     
     [self trainShowHUDOnlyActivity];
     
-    NSMutableDictionary  *muDic = [NSMutableDictionary dictionary];
-    [muDic setObject:notEmptyStr(appraiseTextView.text) forKey:@"content"];
-    [muDic setObject:notEmptyStr(grade)                 forKey:@"grade"];
-    [muDic setObject:notEmptyStr(_infoDic[@"room_id"])  forKey:@"room_id"];
-    [muDic setObject:notEmptyStr(_infoDic[@"type"])      forKey:@"type"];
-    [muDic setObject:notEmptyStr(_infoDic[@"object_id"]) forKey:@"object_id"];
-
-
-    
-    [[TrainNetWorkAPIClient client] trainCourseAddAppraiseWithinfoDic:muDic Success:^(NSDictionary *dic) {
+    if(self.isclass) {
         
-        if (dic) {
-            
-            if (self.delegate &&[self.delegate respondsToSelector:@selector(saveAppraiseSuccess:)]) {
-                [self.delegate saveAppraiseSuccess:dic[@"comment"]];
+        [[TrainNetWorkAPIClient client] trainAddClassCommentWithClass_id:self.class_id grade:grade content:notEmptyStr(appraiseTextView.text) Success:^(NSDictionary *dic) {
+            if (dic) {
+                
+                if (self.delegate &&[self.delegate respondsToSelector:@selector(saveAppraiseSuccess:)]) {
+                    [self.delegate saveAppraiseSuccess:dic[@"comment"]];
+                }
+                
+                [self trainShowHUDOnlyText:@"评价成功" andoff_y:150.0f];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [self.navigationController popViewControllerAnimated:YES];
+                    
+                });
             }
             
-            [self trainShowHUDOnlyText:@"评价成功" andoff_y:150.0f];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self.navigationController popViewControllerAnimated:YES];
+        } andFailure:^(NSInteger errorCode, NSString *errorMsg) {
+            [self trainShowHUDOnlyText:@"评价失败" andoff_y:150.0f];
+
+        }];
+        
+    }else {
+     
+        NSMutableDictionary  *muDic = [NSMutableDictionary dictionary];
+        [muDic setObject:notEmptyStr(appraiseTextView.text) forKey:@"content"];
+        [muDic setObject:notEmptyStr(grade)                 forKey:@"grade"];
+        [muDic setObject:notEmptyStr(_infoDic[@"room_id"])  forKey:@"room_id"];
+        [muDic setObject:notEmptyStr(_infoDic[@"type"])      forKey:@"type"];
+        [muDic setObject:notEmptyStr(_infoDic[@"object_id"]) forKey:@"object_id"];
+        [[TrainNetWorkAPIClient client] trainCourseAddAppraiseWithinfoDic:muDic Success:^(NSDictionary *dic) {
+            
+            if (dic) {
                 
-            });
-        }
-    } andFailure:^(NSInteger errorCode, NSString *errorMsg) {
-
-        [self trainShowHUDOnlyText:@"评价失败" andoff_y:150.0f];
-
-    }];
-   
+                if (self.delegate &&[self.delegate respondsToSelector:@selector(saveAppraiseSuccess:)]) {
+                    [self.delegate saveAppraiseSuccess:dic[@"comment"]];
+                }
+                
+                [self trainShowHUDOnlyText:@"评价成功" andoff_y:150.0f];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [self.navigationController popViewControllerAnimated:YES];
+                    
+                });
+            }
+        } andFailure:^(NSInteger errorCode, NSString *errorMsg) {
+            
+            [self trainShowHUDOnlyText:@"评价失败" andoff_y:150.0f];
+            
+        }];
+    }
 }
 
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{

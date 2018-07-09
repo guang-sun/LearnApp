@@ -97,12 +97,6 @@
 		184C233A1E25C97500C831C6 /* TrainLocalVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C23301E25C97500C831C6 /* TrainLocalVideoViewController.m */; };
 		184C233B1E25C97500C831C6 /* TrainDownloadFinishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C23331E25C97500C831C6 /* TrainDownloadFinishCell.m */; };
 		184C233C1E25C97500C831C6 /* TrainDownloadingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C23351E25C97500C831C6 /* TrainDownloadingCell.m */; };
-		18525C6A1E4879C900BC05B6 /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18525C5F1E4879C900BC05B6 /* WMMenuItem.m */; };
-		18525C6B1E4879CA00BC05B6 /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18525C611E4879C900BC05B6 /* WMMenuView.m */; };
-		18525C6C1E4879CA00BC05B6 /* WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18525C631E4879C900BC05B6 /* WMPageController.m */; };
-		18525C6D1E4879CA00BC05B6 /* WMPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18525C651E4879C900BC05B6 /* WMPanGestureRecognizer.m */; };
-		18525C6E1E4879CA00BC05B6 /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18525C671E4879C900BC05B6 /* WMProgressView.m */; };
-		18525C6F1E4879CA00BC05B6 /* WMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18525C691E4879C900BC05B6 /* WMScrollView.m */; };
 		18746AA11E1CF4830082955E /* TrainMessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18746AA01E1CF4830082955E /* TrainMessageListViewController.m */; };
 		18746AA41E1CF4E30082955E /* TrainMessageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18746AA31E1CF4E30082955E /* TrainMessageListCell.m */; };
 		18746AA81E1CF51E0082955E /* TrainMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18746AA71E1CF51E0082955E /* TrainMessageModel.m */; };
@@ -160,6 +154,26 @@
 		18FD22671DF7A2D20085174D /* TrainImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD22661DF7A2D20085174D /* TrainImageButton.m */; };
 		18FD226A1DF7A9370085174D /* TrainUnfoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD22691DF7A9370085174D /* TrainUnfoldView.m */; };
 		763003918F6710EA5097A86F /* libPods-KindeeTrain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EEDF96713530251D9A70853 /* libPods-KindeeTrain.a */; };
+		840944F820DE125400FC5DF6 /* WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840944E520DE125400FC5DF6 /* WMPageController.m */; };
+		840944F920DE125400FC5DF6 /* UIViewController+WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840944E620DE125400FC5DF6 /* UIViewController+WMPageController.m */; };
+		840944FA20DE125400FC5DF6 /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 840944EC20DE125400FC5DF6 /* WMMenuItem.m */; };
+		840944FB20DE125400FC5DF6 /* WMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840944ED20DE125400FC5DF6 /* WMScrollView.m */; };
+		840944FC20DE125400FC5DF6 /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840944EE20DE125400FC5DF6 /* WMMenuView.m */; };
+		840944FD20DE125400FC5DF6 /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840944EF20DE125400FC5DF6 /* WMProgressView.m */; };
+		840944FE20DE125400FC5DF6 /* TPDelegateMatrioska.m in Sources */ = {isa = PBXBuildFile; fileRef = 840944F520DE125400FC5DF6 /* TPDelegateMatrioska.m */; };
+		840944FF20DE125400FC5DF6 /* WMStickyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840944F720DE125400FC5DF6 /* WMStickyPageViewController.m */; };
+		840CF90A20D7ADBA00688FCC /* TrainClassResCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CF90820D7ADBA00688FCC /* TrainClassResCourseCell.m */; };
+		840CF90B20D7ADBA00688FCC /* TrainClassResCourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840CF90920D7ADBA00688FCC /* TrainClassResCourseCell.xib */; };
+		840CF90F20D7B28900688FCC /* TrainClassExamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CF90D20D7B28900688FCC /* TrainClassExamCell.m */; };
+		840CF91020D7B28900688FCC /* TrainClassExamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840CF90E20D7B28900688FCC /* TrainClassExamCell.xib */; };
+		840CF91320D7B83D00688FCC /* TrainClassCourseHourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CF91220D7B83D00688FCC /* TrainClassCourseHourCell.m */; };
+		840CF91720D95D3F00688FCC /* TrainClassExamRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CF91520D95D3F00688FCC /* TrainClassExamRecordCell.m */; };
+		8413D87F20CD0EE70010D02D /* TrainClassCommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8413D87D20CD0EE70010D02D /* TrainClassCommendCell.m */; };
+		8413D88020CD0EE70010D02D /* TrainClassCommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8413D87E20CD0EE70010D02D /* TrainClassCommendCell.xib */; };
+		8413D88420CD15840010D02D /* TrainMatesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8413D88220CD15840010D02D /* TrainMatesCollectionViewCell.m */; };
+		8413D88520CD15840010D02D /* TrainMatesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8413D88320CD15840010D02D /* TrainMatesCollectionViewCell.xib */; };
+		8413D88920CD17DA0010D02D /* TrainCommendStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8413D88720CD17DA0010D02D /* TrainCommendStatusCell.m */; };
+		8413D88A20CD17DA0010D02D /* TrainCommendStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8413D88820CD17DA0010D02D /* TrainCommendStatusCell.xib */; };
 		847122F71F96429D007DC3A4 /* Login_Login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C3E4611F963F6000BD7A49 /* Login_Login@2x.png */; };
 		847122F81F96429D007DC3A4 /* Login_LoginBgImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C3E4621F963F6000BD7A49 /* Login_LoginBgImage@2x.png */; };
 		847122F91F96429D007DC3A4 /* Login_Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C3E4631F963F6000BD7A49 /* Login_Logo@2x.png */; };
@@ -525,9 +539,25 @@
 		847124611F96429E007DC3A4 /* TXT.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C3E5D21F963F6000BD7A49 /* TXT.png */; };
 		847124621F96429E007DC3A4 /* user_avatar_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C3E5D31F963F6000BD7A49 /* user_avatar_default.png */; };
 		847124631F96429E007DC3A4 /* XLS.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C3E5D41F963F6000BD7A49 /* XLS.png */; };
+		8477301120CAD7E000DF7A41 /* TrainNewClassListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477301020CAD7E000DF7A41 /* TrainNewClassListViewController.m */; };
+		8477301520CAD8D100DF7A41 /* TrainNewClassListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477301320CAD8D100DF7A41 /* TrainNewClassListTableViewCell.m */; };
+		8477301620CAD8D100DF7A41 /* TrainNewClassListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8477301420CAD8D100DF7A41 /* TrainNewClassListTableViewCell.xib */; };
+		8477301920CADE5300DF7A41 /* UIView+RZNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477301720CADE5200DF7A41 /* UIView+RZNib.m */; };
+		8477301C20CADF3400DF7A41 /* TrainClassHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477301B20CADF3400DF7A41 /* TrainClassHomeViewController.m */; };
+		8477301F20CAE1B700DF7A41 /* TrainNewClassInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477301E20CAE1B700DF7A41 /* TrainNewClassInfoViewController.m */; };
+		8477302220CAE20200DF7A41 /* TrainNewCouseHourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477302120CAE20200DF7A41 /* TrainNewCouseHourViewController.m */; };
+		8477302520CAE21B00DF7A41 /* TrainClassCommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477302420CAE21B00DF7A41 /* TrainClassCommendViewController.m */; };
+		8477302820CAE4DB00DF7A41 /* TrainClassInfoSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477302720CAE4DB00DF7A41 /* TrainClassInfoSectionView.m */; };
+		8477302A20CAE4FE00DF7A41 /* TrainClassInfoSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8477302920CAE4FE00DF7A41 /* TrainClassInfoSectionView.xib */; };
+		8477302D20CAE6DA00DF7A41 /* TrainClassInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477302C20CAE6DA00DF7A41 /* TrainClassInfoTableViewCell.m */; };
+		8477303020CAE72C00DF7A41 /* TrainClassMatesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8477302F20CAE72C00DF7A41 /* TrainClassMatesTableViewCell.m */; };
+		848B560620DBEE45001163F9 /* Resource.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848B560520DBEE45001163F9 /* Resource.xcassets */; };
 		8494384920A9D04400DEC76F /* TrainLocalLearnRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 8494384820A9D04400DEC76F /* TrainLocalLearnRecord.m */; };
 		84D44AA5200B1E3500137351 /* TrainNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D44AA3200B1E3500137351 /* TrainNewsDetailViewController.m */; };
 		84D44AA6200B1E3500137351 /* TrainNewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D44AA4200B1E3500137351 /* TrainNewsDetailViewController.xib */; };
+		84E2A8AF20D4F2B70032F01C /* TrainNewClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2A8AE20D4F2B70032F01C /* TrainNewClassModel.m */; };
+		84E2A8B220D791470032F01C /* TrainClassPhaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2A8B120D791470032F01C /* TrainClassPhaseModel.m */; };
+		84E7DDB120DA9F5700093117 /* TrainExamRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E7DDB020DA9F5700093117 /* TrainExamRecordView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -723,18 +753,6 @@
 		184C23331E25C97500C831C6 /* TrainDownloadFinishCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainDownloadFinishCell.m; sourceTree = "<group>"; };
 		184C23341E25C97500C831C6 /* TrainDownloadingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainDownloadingCell.h; sourceTree = "<group>"; };
 		184C23351E25C97500C831C6 /* TrainDownloadingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainDownloadingCell.m; sourceTree = "<group>"; };
-		18525C5E1E4879C900BC05B6 /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
-		18525C5F1E4879C900BC05B6 /* WMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuItem.m; sourceTree = "<group>"; };
-		18525C601E4879C900BC05B6 /* WMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuView.h; sourceTree = "<group>"; };
-		18525C611E4879C900BC05B6 /* WMMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuView.m; sourceTree = "<group>"; };
-		18525C621E4879C900BC05B6 /* WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageController.h; sourceTree = "<group>"; };
-		18525C631E4879C900BC05B6 /* WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageController.m; sourceTree = "<group>"; };
-		18525C641E4879C900BC05B6 /* WMPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPanGestureRecognizer.h; sourceTree = "<group>"; };
-		18525C651E4879C900BC05B6 /* WMPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPanGestureRecognizer.m; sourceTree = "<group>"; };
-		18525C661E4879C900BC05B6 /* WMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMProgressView.h; sourceTree = "<group>"; };
-		18525C671E4879C900BC05B6 /* WMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMProgressView.m; sourceTree = "<group>"; };
-		18525C681E4879C900BC05B6 /* WMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMScrollView.h; sourceTree = "<group>"; };
-		18525C691E4879C900BC05B6 /* WMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMScrollView.m; sourceTree = "<group>"; };
 		18746A9F1E1CF4830082955E /* TrainMessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainMessageListViewController.h; sourceTree = "<group>"; };
 		18746AA01E1CF4830082955E /* TrainMessageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainMessageListViewController.m; sourceTree = "<group>"; };
 		18746AA21E1CF4E30082955E /* TrainMessageListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainMessageListCell.h; sourceTree = "<group>"; };
@@ -848,6 +866,64 @@
 		2435EBE11666833745C71DB5 /* Pods-KindeeTrain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KindeeTrain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KindeeTrain/Pods-KindeeTrain.debug.xcconfig"; sourceTree = "<group>"; };
 		4892B01A16573B80F3372077 /* Pods-KindeeTrain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KindeeTrain.release.xcconfig"; path = "Pods/Target Support Files/Pods-KindeeTrain/Pods-KindeeTrain.release.xcconfig"; sourceTree = "<group>"; };
 		7EEDF96713530251D9A70853 /* libPods-KindeeTrain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KindeeTrain.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		840944E520DE125400FC5DF6 /* WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageController.m; sourceTree = "<group>"; };
+		840944E620DE125400FC5DF6 /* UIViewController+WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WMPageController.m"; sourceTree = "<group>"; };
+		840944E820DE125400FC5DF6 /* WMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMScrollView.h; sourceTree = "<group>"; };
+		840944E920DE125400FC5DF6 /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
+		840944EA20DE125400FC5DF6 /* WMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuView.h; sourceTree = "<group>"; };
+		840944EB20DE125400FC5DF6 /* WMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMProgressView.h; sourceTree = "<group>"; };
+		840944EC20DE125400FC5DF6 /* WMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuItem.m; sourceTree = "<group>"; };
+		840944ED20DE125400FC5DF6 /* WMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMScrollView.m; sourceTree = "<group>"; };
+		840944EE20DE125400FC5DF6 /* WMMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuView.m; sourceTree = "<group>"; };
+		840944EF20DE125400FC5DF6 /* WMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMProgressView.m; sourceTree = "<group>"; };
+		840944F020DE125400FC5DF6 /* WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageController.h; sourceTree = "<group>"; };
+		840944F120DE125400FC5DF6 /* UIViewController+WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WMPageController.h"; sourceTree = "<group>"; };
+		840944F320DE125400FC5DF6 /* WMStickyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMStickyPageViewController.h; sourceTree = "<group>"; };
+		840944F520DE125400FC5DF6 /* TPDelegateMatrioska.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPDelegateMatrioska.m; sourceTree = "<group>"; };
+		840944F620DE125400FC5DF6 /* TPDelegateMatrioska.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPDelegateMatrioska.h; sourceTree = "<group>"; };
+		840944F720DE125400FC5DF6 /* WMStickyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMStickyPageViewController.m; sourceTree = "<group>"; };
+		840CF90720D7ADBA00688FCC /* TrainClassResCourseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainClassResCourseCell.h; sourceTree = "<group>"; };
+		840CF90820D7ADBA00688FCC /* TrainClassResCourseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainClassResCourseCell.m; sourceTree = "<group>"; };
+		840CF90920D7ADBA00688FCC /* TrainClassResCourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainClassResCourseCell.xib; sourceTree = "<group>"; };
+		840CF90C20D7B28900688FCC /* TrainClassExamCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainClassExamCell.h; sourceTree = "<group>"; };
+		840CF90D20D7B28900688FCC /* TrainClassExamCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainClassExamCell.m; sourceTree = "<group>"; };
+		840CF90E20D7B28900688FCC /* TrainClassExamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainClassExamCell.xib; sourceTree = "<group>"; };
+		840CF91120D7B83D00688FCC /* TrainClassCourseHourCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainClassCourseHourCell.h; sourceTree = "<group>"; };
+		840CF91220D7B83D00688FCC /* TrainClassCourseHourCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainClassCourseHourCell.m; sourceTree = "<group>"; };
+		840CF91420D95D3F00688FCC /* TrainClassExamRecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainClassExamRecordCell.h; sourceTree = "<group>"; };
+		840CF91520D95D3F00688FCC /* TrainClassExamRecordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainClassExamRecordCell.m; sourceTree = "<group>"; };
+		8413D87C20CD0EE70010D02D /* TrainClassCommendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainClassCommendCell.h; sourceTree = "<group>"; };
+		8413D87D20CD0EE70010D02D /* TrainClassCommendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainClassCommendCell.m; sourceTree = "<group>"; };
+		8413D87E20CD0EE70010D02D /* TrainClassCommendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainClassCommendCell.xib; sourceTree = "<group>"; };
+		8413D88120CD15840010D02D /* TrainMatesCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainMatesCollectionViewCell.h; sourceTree = "<group>"; };
+		8413D88220CD15840010D02D /* TrainMatesCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainMatesCollectionViewCell.m; sourceTree = "<group>"; };
+		8413D88320CD15840010D02D /* TrainMatesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainMatesCollectionViewCell.xib; sourceTree = "<group>"; };
+		8413D88620CD17DA0010D02D /* TrainCommendStatusCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainCommendStatusCell.h; sourceTree = "<group>"; };
+		8413D88720CD17DA0010D02D /* TrainCommendStatusCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainCommendStatusCell.m; sourceTree = "<group>"; };
+		8413D88820CD17DA0010D02D /* TrainCommendStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainCommendStatusCell.xib; sourceTree = "<group>"; };
+		8477300F20CAD7E000DF7A41 /* TrainNewClassListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainNewClassListViewController.h; sourceTree = "<group>"; };
+		8477301020CAD7E000DF7A41 /* TrainNewClassListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainNewClassListViewController.m; sourceTree = "<group>"; };
+		8477301220CAD8D100DF7A41 /* TrainNewClassListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainNewClassListTableViewCell.h; sourceTree = "<group>"; };
+		8477301320CAD8D100DF7A41 /* TrainNewClassListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainNewClassListTableViewCell.m; sourceTree = "<group>"; };
+		8477301420CAD8D100DF7A41 /* TrainNewClassListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainNewClassListTableViewCell.xib; sourceTree = "<group>"; };
+		8477301720CADE5200DF7A41 /* UIView+RZNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RZNib.m"; sourceTree = "<group>"; };
+		8477301820CADE5300DF7A41 /* UIView+RZNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RZNib.h"; sourceTree = "<group>"; };
+		8477301A20CADF3400DF7A41 /* TrainClassHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainClassHomeViewController.h; sourceTree = "<group>"; };
+		8477301B20CADF3400DF7A41 /* TrainClassHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainClassHomeViewController.m; sourceTree = "<group>"; };
+		8477301D20CAE1B700DF7A41 /* TrainNewClassInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainNewClassInfoViewController.h; sourceTree = "<group>"; };
+		8477301E20CAE1B700DF7A41 /* TrainNewClassInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainNewClassInfoViewController.m; sourceTree = "<group>"; };
+		8477302020CAE20200DF7A41 /* TrainNewCouseHourViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainNewCouseHourViewController.h; sourceTree = "<group>"; };
+		8477302120CAE20200DF7A41 /* TrainNewCouseHourViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainNewCouseHourViewController.m; sourceTree = "<group>"; };
+		8477302320CAE21B00DF7A41 /* TrainClassCommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainClassCommendViewController.h; sourceTree = "<group>"; };
+		8477302420CAE21B00DF7A41 /* TrainClassCommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainClassCommendViewController.m; sourceTree = "<group>"; };
+		8477302620CAE4DB00DF7A41 /* TrainClassInfoSectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainClassInfoSectionView.h; sourceTree = "<group>"; };
+		8477302720CAE4DB00DF7A41 /* TrainClassInfoSectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainClassInfoSectionView.m; sourceTree = "<group>"; };
+		8477302920CAE4FE00DF7A41 /* TrainClassInfoSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainClassInfoSectionView.xib; sourceTree = "<group>"; };
+		8477302B20CAE6DA00DF7A41 /* TrainClassInfoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainClassInfoTableViewCell.h; sourceTree = "<group>"; };
+		8477302C20CAE6DA00DF7A41 /* TrainClassInfoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainClassInfoTableViewCell.m; sourceTree = "<group>"; };
+		8477302E20CAE72C00DF7A41 /* TrainClassMatesTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainClassMatesTableViewCell.h; sourceTree = "<group>"; };
+		8477302F20CAE72C00DF7A41 /* TrainClassMatesTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainClassMatesTableViewCell.m; sourceTree = "<group>"; };
+		848B560520DBEE45001163F9 /* Resource.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resource.xcassets; sourceTree = "<group>"; };
 		8494384720A9D04400DEC76F /* TrainLocalLearnRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainLocalLearnRecord.h; sourceTree = "<group>"; };
 		8494384820A9D04400DEC76F /* TrainLocalLearnRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainLocalLearnRecord.m; sourceTree = "<group>"; };
 		84C3E4611F963F6000BD7A49 /* Login_Login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login_Login@2x.png"; sourceTree = "<group>"; };
@@ -1218,6 +1294,12 @@
 		84D44AA2200B1E3500137351 /* TrainNewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainNewsDetailViewController.h; sourceTree = "<group>"; };
 		84D44AA3200B1E3500137351 /* TrainNewsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainNewsDetailViewController.m; sourceTree = "<group>"; };
 		84D44AA4200B1E3500137351 /* TrainNewsDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainNewsDetailViewController.xib; sourceTree = "<group>"; };
+		84E2A8AD20D4F2B70032F01C /* TrainNewClassModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainNewClassModel.h; sourceTree = "<group>"; };
+		84E2A8AE20D4F2B70032F01C /* TrainNewClassModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainNewClassModel.m; sourceTree = "<group>"; };
+		84E2A8B020D791470032F01C /* TrainClassPhaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainClassPhaseModel.h; sourceTree = "<group>"; };
+		84E2A8B120D791470032F01C /* TrainClassPhaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainClassPhaseModel.m; sourceTree = "<group>"; };
+		84E7DDAF20DA9F5700093117 /* TrainExamRecordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainExamRecordView.h; sourceTree = "<group>"; };
+		84E7DDB020DA9F5700093117 /* TrainExamRecordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainExamRecordView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1342,6 +1424,7 @@
 				1825DBAA1DF180E5008A0FC3 /* ViewController.m */,
 				188810E61E6011AB00CFFEDE /* kindee.cer */,
 				1825DBAC1DF180E5008A0FC3 /* Main.storyboard */,
+				848B560520DBEE45001163F9 /* Resource.xcassets */,
 				1825DBAF1DF180E5008A0FC3 /* Assets.xcassets */,
 				1825DBB11DF180E5008A0FC3 /* LaunchScreen.storyboard */,
 				1825DBB41DF180E5008A0FC3 /* Info.plist */,
@@ -1374,6 +1457,7 @@
 		1825DBBC1DF181F6008A0FC3 /* TrainClassCourse */ = {
 			isa = PBXGroup;
 			children = (
+				8477300B20CAD79F00DF7A41 /* TrainNewClass */,
 				1825DBBD1DF181F6008A0FC3 /* TrainController */,
 				1825DBC01DF181F6008A0FC3 /* TrainMoviePlayer */,
 				1825DBC11DF181F6008A0FC3 /* TrainView */,
@@ -1817,7 +1901,7 @@
 		1825DD6F1DF181F6008A0FC3 /* TrainThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				18525C5D1E4879C900BC05B6 /* TrainPageController */,
+				840944E320DE125400FC5DF6 /* WMPageViewController */,
 				18F985DF1E0247F500C5E11B /* TrainDownload */,
 				18214FC71DF6C95D00ACF275 /* TrainPhotoBrowser */,
 				18214B581DF6666F00ACF275 /* TrainPlayerView */,
@@ -1857,6 +1941,8 @@
 		1825DEEE1DF1827E008A0FC3 /* TrainCategory */ = {
 			isa = PBXGroup;
 			children = (
+				8477301820CADE5300DF7A41 /* UIView+RZNib.h */,
+				8477301720CADE5200DF7A41 /* UIView+RZNib.m */,
 				1825DEEF1DF1827E008A0FC3 /* NSString+TrainStringColor.h */,
 				1825DEF01DF1827E008A0FC3 /* NSString+TrainStringColor.m */,
 				1825DEF11DF1827E008A0FC3 /* NSTimer+TrainScrollTimer.h */,
@@ -1985,25 +2071,6 @@
 				184C23351E25C97500C831C6 /* TrainDownloadingCell.m */,
 			);
 			path = TrainView;
-			sourceTree = "<group>";
-		};
-		18525C5D1E4879C900BC05B6 /* TrainPageController */ = {
-			isa = PBXGroup;
-			children = (
-				18525C621E4879C900BC05B6 /* WMPageController.h */,
-				18525C631E4879C900BC05B6 /* WMPageController.m */,
-				18525C641E4879C900BC05B6 /* WMPanGestureRecognizer.h */,
-				18525C651E4879C900BC05B6 /* WMPanGestureRecognizer.m */,
-				18525C5E1E4879C900BC05B6 /* WMMenuItem.h */,
-				18525C5F1E4879C900BC05B6 /* WMMenuItem.m */,
-				18525C601E4879C900BC05B6 /* WMMenuView.h */,
-				18525C611E4879C900BC05B6 /* WMMenuView.m */,
-				18525C661E4879C900BC05B6 /* WMProgressView.h */,
-				18525C671E4879C900BC05B6 /* WMProgressView.m */,
-				18525C681E4879C900BC05B6 /* WMScrollView.h */,
-				18525C691E4879C900BC05B6 /* WMScrollView.m */,
-			);
-			path = TrainPageController;
 			sourceTree = "<group>";
 		};
 		18746A901E1CF44C0082955E /* TrainMessageView */ = {
@@ -2151,6 +2218,137 @@
 				7EEDF96713530251D9A70853 /* libPods-KindeeTrain.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		840944E320DE125400FC5DF6 /* WMPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				840944E420DE125400FC5DF6 /* WMPageController */,
+				840944F220DE125400FC5DF6 /* WMStickyPageViewController */,
+			);
+			path = WMPageViewController;
+			sourceTree = "<group>";
+		};
+		840944E420DE125400FC5DF6 /* WMPageController */ = {
+			isa = PBXGroup;
+			children = (
+				840944E520DE125400FC5DF6 /* WMPageController.m */,
+				840944E620DE125400FC5DF6 /* UIViewController+WMPageController.m */,
+				840944E720DE125400FC5DF6 /* WMMenuView */,
+				840944F020DE125400FC5DF6 /* WMPageController.h */,
+				840944F120DE125400FC5DF6 /* UIViewController+WMPageController.h */,
+			);
+			path = WMPageController;
+			sourceTree = "<group>";
+		};
+		840944E720DE125400FC5DF6 /* WMMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				840944E820DE125400FC5DF6 /* WMScrollView.h */,
+				840944E920DE125400FC5DF6 /* WMMenuItem.h */,
+				840944EA20DE125400FC5DF6 /* WMMenuView.h */,
+				840944EB20DE125400FC5DF6 /* WMProgressView.h */,
+				840944EC20DE125400FC5DF6 /* WMMenuItem.m */,
+				840944ED20DE125400FC5DF6 /* WMScrollView.m */,
+				840944EE20DE125400FC5DF6 /* WMMenuView.m */,
+				840944EF20DE125400FC5DF6 /* WMProgressView.m */,
+			);
+			path = WMMenuView;
+			sourceTree = "<group>";
+		};
+		840944F220DE125400FC5DF6 /* WMStickyPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				840944F320DE125400FC5DF6 /* WMStickyPageViewController.h */,
+				840944F420DE125400FC5DF6 /* TPDelegateMatrioska */,
+				840944F720DE125400FC5DF6 /* WMStickyPageViewController.m */,
+			);
+			path = WMStickyPageViewController;
+			sourceTree = "<group>";
+		};
+		840944F420DE125400FC5DF6 /* TPDelegateMatrioska */ = {
+			isa = PBXGroup;
+			children = (
+				840944F520DE125400FC5DF6 /* TPDelegateMatrioska.m */,
+				840944F620DE125400FC5DF6 /* TPDelegateMatrioska.h */,
+			);
+			path = TPDelegateMatrioska;
+			sourceTree = "<group>";
+		};
+		8477300B20CAD79F00DF7A41 /* TrainNewClass */ = {
+			isa = PBXGroup;
+			children = (
+				8477300C20CAD79F00DF7A41 /* Model */,
+				8477300D20CAD79F00DF7A41 /* View */,
+				8477300E20CAD79F00DF7A41 /* ViewController */,
+			);
+			path = TrainNewClass;
+			sourceTree = "<group>";
+		};
+		8477300C20CAD79F00DF7A41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84E2A8AD20D4F2B70032F01C /* TrainNewClassModel.h */,
+				84E2A8AE20D4F2B70032F01C /* TrainNewClassModel.m */,
+				84E2A8B020D791470032F01C /* TrainClassPhaseModel.h */,
+				84E2A8B120D791470032F01C /* TrainClassPhaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8477300D20CAD79F00DF7A41 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8477301220CAD8D100DF7A41 /* TrainNewClassListTableViewCell.h */,
+				8477301320CAD8D100DF7A41 /* TrainNewClassListTableViewCell.m */,
+				8477301420CAD8D100DF7A41 /* TrainNewClassListTableViewCell.xib */,
+				8477302620CAE4DB00DF7A41 /* TrainClassInfoSectionView.h */,
+				8477302720CAE4DB00DF7A41 /* TrainClassInfoSectionView.m */,
+				8477302920CAE4FE00DF7A41 /* TrainClassInfoSectionView.xib */,
+				8477302B20CAE6DA00DF7A41 /* TrainClassInfoTableViewCell.h */,
+				8477302C20CAE6DA00DF7A41 /* TrainClassInfoTableViewCell.m */,
+				8477302E20CAE72C00DF7A41 /* TrainClassMatesTableViewCell.h */,
+				8477302F20CAE72C00DF7A41 /* TrainClassMatesTableViewCell.m */,
+				8413D88120CD15840010D02D /* TrainMatesCollectionViewCell.h */,
+				8413D88220CD15840010D02D /* TrainMatesCollectionViewCell.m */,
+				8413D88320CD15840010D02D /* TrainMatesCollectionViewCell.xib */,
+				8413D87C20CD0EE70010D02D /* TrainClassCommendCell.h */,
+				8413D87D20CD0EE70010D02D /* TrainClassCommendCell.m */,
+				8413D87E20CD0EE70010D02D /* TrainClassCommendCell.xib */,
+				8413D88620CD17DA0010D02D /* TrainCommendStatusCell.h */,
+				8413D88720CD17DA0010D02D /* TrainCommendStatusCell.m */,
+				8413D88820CD17DA0010D02D /* TrainCommendStatusCell.xib */,
+				840CF90720D7ADBA00688FCC /* TrainClassResCourseCell.h */,
+				840CF90820D7ADBA00688FCC /* TrainClassResCourseCell.m */,
+				840CF90920D7ADBA00688FCC /* TrainClassResCourseCell.xib */,
+				840CF90C20D7B28900688FCC /* TrainClassExamCell.h */,
+				840CF90D20D7B28900688FCC /* TrainClassExamCell.m */,
+				840CF90E20D7B28900688FCC /* TrainClassExamCell.xib */,
+				840CF91120D7B83D00688FCC /* TrainClassCourseHourCell.h */,
+				840CF91220D7B83D00688FCC /* TrainClassCourseHourCell.m */,
+				840CF91420D95D3F00688FCC /* TrainClassExamRecordCell.h */,
+				840CF91520D95D3F00688FCC /* TrainClassExamRecordCell.m */,
+				84E7DDAF20DA9F5700093117 /* TrainExamRecordView.h */,
+				84E7DDB020DA9F5700093117 /* TrainExamRecordView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8477300E20CAD79F00DF7A41 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8477300F20CAD7E000DF7A41 /* TrainNewClassListViewController.h */,
+				8477301020CAD7E000DF7A41 /* TrainNewClassListViewController.m */,
+				8477301A20CADF3400DF7A41 /* TrainClassHomeViewController.h */,
+				8477301B20CADF3400DF7A41 /* TrainClassHomeViewController.m */,
+				8477301D20CAE1B700DF7A41 /* TrainNewClassInfoViewController.h */,
+				8477301E20CAE1B700DF7A41 /* TrainNewClassInfoViewController.m */,
+				8477302020CAE20200DF7A41 /* TrainNewCouseHourViewController.h */,
+				8477302120CAE20200DF7A41 /* TrainNewCouseHourViewController.m */,
+				8477302320CAE21B00DF7A41 /* TrainClassCommendViewController.h */,
+				8477302420CAE21B00DF7A41 /* TrainClassCommendViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		84C3E45E1F963F6000BD7A49 /* TrainResources */ = {
@@ -2632,8 +2830,8 @@
 				TargetAttributes = {
 					1825DB9F1DF180E5008A0FC3 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 4R6FDKKS4M;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 73D7BETCY2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -2671,6 +2869,7 @@
 				847122FF1F96429D007DC3A4 /* Welcom_White_4s@2x.png in Resources */,
 				847123001F96429D007DC3A4 /* Welcom_White_5@2x.png in Resources */,
 				847123011F96429D007DC3A4 /* Welcom_White_6@2x.png in Resources */,
+				8413D88520CD15840010D02D /* TrainMatesCollectionViewCell.xib in Resources */,
 				847123021F96429D007DC3A4 /* Welcom_White_6p.png in Resources */,
 				847123031F96429D007DC3A4 /* Welcome_Bgview@2x.png in Resources */,
 				847123041F96429D007DC3A4 /* Welcome_Bgview_4s.png in Resources */,
@@ -2683,6 +2882,7 @@
 				8471230B1F96429D007DC3A4 /* Login_PassWordeye@3x.png in Resources */,
 				8471230C1F96429D007DC3A4 /* Login_rem@3x.png in Resources */,
 				8471230D1F96429D007DC3A4 /* Login_UnRem@3x.png in Resources */,
+				8477302A20CAE4FE00DF7A41 /* TrainClassInfoSectionView.xib in Resources */,
 				8471230E1F96429D007DC3A4 /* Login_UserName@3x.png in Resources */,
 				8471230F1F96429D007DC3A4 /* Welcome_Bgview@3x.png in Resources */,
 				847123101F96429D007DC3A4 /* Welcome_Lab@3x.png in Resources */,
@@ -2698,6 +2898,7 @@
 				8471231A1F96429D007DC3A4 /* Train_Activity_Time1@2x.png in Resources */,
 				8471231B1F96429D007DC3A4 /* Train_Activity_Time@2x.png in Resources */,
 				8471231C1F96429D007DC3A4 /* Train_Cell_right@2x.png in Resources */,
+				8413D88A20CD17DA0010D02D /* TrainCommendStatusCell.xib in Resources */,
 				8471231D1F96429D007DC3A4 /* Train_Class_Detail_More@2x.png in Resources */,
 				8471231E1F96429D007DC3A4 /* Train_Class_Detail_News@2x.png in Resources */,
 				8471231F1F96429D007DC3A4 /* Train_Class_Detail_Rili@2x.png in Resources */,
@@ -2791,6 +2992,7 @@
 				847123771F96429D007DC3A4 /* Train_Main_exam@2x.png in Resources */,
 				847123781F96429D007DC3A4 /* Train_Main_Learning@2x.png in Resources */,
 				847123791F96429D007DC3A4 /* Train_Main_myAd@2x.png in Resources */,
+				840CF91020D7B28900688FCC /* TrainClassExamCell.xib in Resources */,
 				8471237A1F96429D007DC3A4 /* Train_Main_myClass@2x.png in Resources */,
 				8471237B1F96429D007DC3A4 /* Train_Main_myCollect@2x.png in Resources */,
 				8471237C1F96429D007DC3A4 /* Train_Main_myCouse@2x.png in Resources */,
@@ -2854,6 +3056,7 @@
 				847123B61F96429D007DC3A4 /* Train_Doc_XLS@3x.jpg in Resources */,
 				847123B71F96429D007DC3A4 /* Train_Document_add@3x.png in Resources */,
 				847123B81F96429D007DC3A4 /* Train_Document_error@3x.png in Resources */,
+				840CF90B20D7ADBA00688FCC /* TrainClassResCourseCell.xib in Resources */,
 				847123B91F96429E007DC3A4 /* Train_Group_collect@3x.png in Resources */,
 				847123BA1F96429E007DC3A4 /* Train_Group_eye@3x.png in Resources */,
 				847123BB1F96429E007DC3A4 /* Train_Group_member@3x.png in Resources */,
@@ -2924,6 +3127,7 @@
 				847123FC1F96429E007DC3A4 /* Train_Main_myClass@3x.png in Resources */,
 				847123FD1F96429E007DC3A4 /* Train_Main_myCollect@3x.png in Resources */,
 				847123FE1F96429E007DC3A4 /* Train_Main_myCouse@3x.png in Resources */,
+				8413D88020CD0EE70010D02D /* TrainClassCommendCell.xib in Resources */,
 				847123FF1F96429E007DC3A4 /* Train_Main_myDocument@3x.png in Resources */,
 				847124001F96429E007DC3A4 /* Train_Main_myIntegral@3x.png in Resources */,
 				847124011F96429E007DC3A4 /* Train_Main_myNote@3x.png in Resources */,
@@ -2994,6 +3198,7 @@
 				847124411F96429E007DC3A4 /* star_big_selected.png in Resources */,
 				847124421F96429E007DC3A4 /* Train_back_default@2x.png in Resources */,
 				847124431F96429E007DC3A4 /* Train_back_highlight@2x.png in Resources */,
+				8477301620CAD8D100DF7A41 /* TrainNewClassListTableViewCell.xib in Resources */,
 				847124441F96429E007DC3A4 /* Train_bgimageView@2x.png in Resources */,
 				847124451F96429E007DC3A4 /* Train_capture.png in Resources */,
 				847124461F96429E007DC3A4 /* train_checkbox_off.png in Resources */,
@@ -3001,6 +3206,7 @@
 				847124481F96429E007DC3A4 /* train_class_default.png in Resources */,
 				847124491F96429E007DC3A4 /* train_course_default.png in Resources */,
 				8471244A1F96429E007DC3A4 /* train_default_file.png in Resources */,
+				848B560620DBEE45001163F9 /* Resource.xcassets in Resources */,
 				8471244B1F96429E007DC3A4 /* Train_default_image.png in Resources */,
 				8471244C1F96429E007DC3A4 /* Train_Error_data.png in Resources */,
 				8471244D1F96429E007DC3A4 /* train_eye.png in Resources */,
@@ -3091,16 +3297,15 @@
 				1825DD7B1DF181F6008A0FC3 /* TrainHomeViewController.m in Sources */,
 				18214FB41DF66F0200ACF275 /* TrainMyNoteCell.m in Sources */,
 				18214FC61DF6A8E600ACF275 /* TrainSetUPViewController.m in Sources */,
+				8477302520CAE21B00DF7A41 /* TrainClassCommendViewController.m in Sources */,
 				18214B4E1DF660B800ACF275 /* UIScrollView+TrainScrollTouch.m in Sources */,
 				184C233A1E25C97500C831C6 /* TrainLocalVideoViewController.m in Sources */,
 				18214B771DF6666F00ACF275 /* TrainBrightnessView.m in Sources */,
-				18525C6F1E4879CA00BC05B6 /* WMScrollView.m in Sources */,
-				18525C6E1E4879CA00BC05B6 /* WMProgressView.m in Sources */,
+				8477301F20CAE1B700DF7A41 /* TrainNewClassInfoViewController.m in Sources */,
 				18214FB11DF66EFA00ACF275 /* TrainMyNoteViewController.m in Sources */,
 				1825DF451DF1839A008A0FC3 /* TrainNetWorkClientBase.m in Sources */,
 				1825DF281DF1827E008A0FC3 /* UITableView+TrainTableViewPlaceHolder.m in Sources */,
 				18FD22671DF7A2D20085174D /* TrainImageButton.m in Sources */,
-				18525C6B1E4879CA00BC05B6 /* WMMenuView.m in Sources */,
 				188EAFC11E1DE27E009DD9FE /* TrainCustomLable.m in Sources */,
 				18214B7E1DF6666F00ACF275 /* UITabBarController+ZFPlayerRotation.m in Sources */,
 				18214FD41DF6D27900ACF275 /* TrainMyIntegralViewController.m in Sources */,
@@ -3112,11 +3317,16 @@
 				1825DBAB1DF180E5008A0FC3 /* ViewController.m in Sources */,
 				180580781DFAB32800A8044C /* TrainMyCollectViewController.m in Sources */,
 				18F4DC631DF5464900C0DC38 /* TrainBaseModel.m in Sources */,
+				84E2A8B220D791470032F01C /* TrainClassPhaseModel.m in Sources */,
+				8477302D20CAE6DA00DF7A41 /* TrainClassInfoTableViewCell.m in Sources */,
 				18214FD11DF6C95D00ACF275 /* TrainWaitingView.m in Sources */,
 				1825DF461DF1839A008A0FC3 /* TrainNetWorkConfiguration.m in Sources */,
 				188EAFD11E1DE654009DD9FE /* TrainNewsModel.m in Sources */,
 				18214B481DF6600300ACF275 /* TrainDocListModel.m in Sources */,
+				8477303020CAE72C00DF7A41 /* TrainClassMatesTableViewCell.m in Sources */,
 				1825DD851DF181F6008A0FC3 /* NJKWebViewProgress.m in Sources */,
+				84E7DDB120DA9F5700093117 /* TrainExamRecordView.m in Sources */,
+				840CF90A20D7ADBA00688FCC /* TrainClassResCourseCell.m in Sources */,
 				18214B7F1DF6666F00ACF275 /* UIView+CustomControlView.m in Sources */,
 				18F4DCC51DF5614B00C0DC38 /* TrainCheckImageCollectionViewCell.m in Sources */,
 				18214FBC1DF6A3FC00ACF275 /* TrainUserInfoViewController.m in Sources */,
@@ -3126,20 +3336,26 @@
 				18214B751DF6666F00ACF275 /* ASValueTrackingSlider.m in Sources */,
 				18F4DC7C1DF55C7900C0DC38 /* TrainClassCourseListCell.m in Sources */,
 				18F4DC5A1DF51C1B00C0DC38 /* TrainScrollImageView.m in Sources */,
+				8477301120CAD7E000DF7A41 /* TrainNewClassListViewController.m in Sources */,
+				8413D88920CD17DA0010D02D /* TrainCommendStatusCell.m in Sources */,
 				18F4DC7E1DF55C7900C0DC38 /* TrainClassMoreHeaderView.m in Sources */,
 				18214B451DF65FBF00ACF275 /* TrainCourseDetailModel.m in Sources */,
 				18214FCF1DF6C95D00ACF275 /* TrainPhotoBrowser.m in Sources */,
 				18CA26191E5166B6004D4A2A /* TrainNavigationController.m in Sources */,
 				180725311E1F3A610015B33F /* TrainTopicDetailHeadView.m in Sources */,
 				18F4DCC71DF5614B00C0DC38 /* TrainGroupDetailViewController.m in Sources */,
+				840944FC20DE125400FC5DF6 /* WMMenuView.m in Sources */,
+				8477301920CADE5300DF7A41 /* UIView+RZNib.m in Sources */,
 				18214FC21DF6A66D00ACF275 /* TrainCenterGroupListCell.m in Sources */,
 				18F4DC6A1DF54C1E00C0DC38 /* UISegmentedControl+Train.m in Sources */,
 				1825DF431DF1839A008A0FC3 /* TrainNetWorkAPIClient.m in Sources */,
 				18F4DC6F1DF55A3500C0DC38 /* TrainCourseClassListCell.m in Sources */,
 				1825DF331DF1827E008A0FC3 /* TrainShowImageView.m in Sources */,
+				840CF91720D95D3F00688FCC /* TrainClassExamRecordCell.m in Sources */,
 				18214FDA1DF6D2B100ACF275 /* TrainMyIntegarlListCell.m in Sources */,
 				18F4DC641DF5464900C0DC38 /* TrainDBHelper.m in Sources */,
 				1825DBA81DF180E5008A0FC3 /* AppDelegate.m in Sources */,
+				8477302220CAE20200DF7A41 /* TrainNewCouseHourViewController.m in Sources */,
 				18F4DC8B1DF55ED200C0DC38 /* TrainAddAppraiseViewController.m in Sources */,
 				1825DD801DF181F6008A0FC3 /* TrainWelcomeViewController.m in Sources */,
 				18214B3F1DF65DE400ACF275 /* TrainExamModel.m in Sources */,
@@ -3155,6 +3371,7 @@
 				18214B7B1DF6666F00ACF275 /* TrainPlayerView.m in Sources */,
 				1821CB411E4961C2003E1A3D /* TrainIntroductionViewController.m in Sources */,
 				1825DF441DF1839A008A0FC3 /* TrainNetWorkAPIEngine.m in Sources */,
+				840944F920DE125400FC5DF6 /* UIViewController+WMPageController.m in Sources */,
 				1825DF2C1DF1827E008A0FC3 /* TrainClassBaseView.m in Sources */,
 				18214FE01DF6D32700ACF275 /* TrainIntegralMoel.m in Sources */,
 				18F4DCD51DF5616500C0DC38 /* TrainGroupListCell.m in Sources */,
@@ -3169,18 +3386,17 @@
 				8494384920A9D04400DEC76F /* TrainLocalLearnRecord.m in Sources */,
 				18214B571DF662D500ACF275 /* TrainTopicSearchListCell.m in Sources */,
 				188EAFD91E1E2FD3009DD9FE /* TrainDownloadManager.m in Sources */,
+				8477302820CAE4DB00DF7A41 /* TrainClassInfoSectionView.m in Sources */,
 				18214B531DF662C000ACF275 /* TrainSearchResultViewController.m in Sources */,
 				18F4DCCB1DF5614B00C0DC38 /* TrainMyTopicListViewController.m in Sources */,
 				1825DF2A1DF1827E008A0FC3 /* TrainAlertTools.m in Sources */,
 				1825DF381DF1827E008A0FC3 /* TrainStringUtil.m in Sources */,
 				1825DD781DF181F6008A0FC3 /* TrainCourseClassViewController.m in Sources */,
-				18525C6A1E4879C900BC05B6 /* WMMenuItem.m in Sources */,
 				18D1D9AE1E5AD0D800F06232 /* UIAlertController+TrainWindow.m in Sources */,
 				1825DF2E1DF1827E008A0FC3 /* TrainClassMenuCollectionViewCell.m in Sources */,
 				1825DD7F1DF181F6008A0FC3 /* TrainLoginViewController.m in Sources */,
 				18F4DCC81DF5614B00C0DC38 /* TrainGroupSearchViewController.m in Sources */,
 				18214B7C1DF6666F00ACF275 /* UIImageView+ZFCache.m in Sources */,
-				18525C6D1E4879CA00BC05B6 /* WMPanGestureRecognizer.m in Sources */,
 				1825DBA51DF180E5008A0FC3 /* main.m in Sources */,
 				1821CB3E1E49617E003E1A3D /* TrainNewMovieViewController.m in Sources */,
 				184C23381E25C97500C831C6 /* TrainCacheCourseListViewController.m in Sources */,
@@ -3189,14 +3405,22 @@
 				1825DF351DF1827E008A0FC3 /* TrainControllerUtil.m in Sources */,
 				18F4DC991DF55F1700C0DC38 /* TrainCourseNoteCell.m in Sources */,
 				188EAFD61E1E2386009DD9FE /* TrainDownloadModel.m in Sources */,
+				8477301C20CADF3400DF7A41 /* TrainClassHomeViewController.m in Sources */,
 				18F4DC971DF55F1700C0DC38 /* TrainCourseDirectoryCell.m in Sources */,
 				188EAFCD1E1DE604009DD9FE /* TrainNewsListCell.m in Sources */,
 				18214FD71DF6D28900ACF275 /* TrainIntegralRuleViewController.m in Sources */,
 				1825DF251DF1827E008A0FC3 /* UIButton+Train.m in Sources */,
+				8413D88420CD15840010D02D /* TrainMatesCollectionViewCell.m in Sources */,
 				1825DF2F1DF1827E008A0FC3 /* TrainClassMenuView.m in Sources */,
-				18525C6C1E4879CA00BC05B6 /* WMPageController.m in Sources */,
+				840CF91320D7B83D00688FCC /* TrainClassCourseHourCell.m in Sources */,
+				840944FD20DE125400FC5DF6 /* WMProgressView.m in Sources */,
+				840944FA20DE125400FC5DF6 /* WMMenuItem.m in Sources */,
 				18746AA81E1CF51E0082955E /* TrainMessageModel.m in Sources */,
+				84E2A8AF20D4F2B70032F01C /* TrainNewClassModel.m in Sources */,
 				18F4DC671DF54B8C00C0DC38 /* TrainCourseAndClassModel.m in Sources */,
+				8413D87F20CD0EE70010D02D /* TrainClassCommendCell.m in Sources */,
+				840944F820DE125400FC5DF6 /* WMPageController.m in Sources */,
+				840944FB20DE125400FC5DF6 /* WMScrollView.m in Sources */,
 				1825DF371DF1827E008A0FC3 /* TrainProgressHUD.m in Sources */,
 				18F4DC751DF55C5600C0DC38 /* TrainClassMoreViewController.m in Sources */,
 				18214FBF1DF6A40600ACF275 /* TrainCenterCourseListCell.m in Sources */,
@@ -3215,12 +3439,15 @@
 				18214B741DF6666F00ACF275 /* ASValuePopUpView.m in Sources */,
 				1825DF321DF1827E008A0FC3 /* TrainSearchBar.m in Sources */,
 				18F4DCD81DF5616500C0DC38 /* TrainTopicListCell.m in Sources */,
+				840944FE20DE125400FC5DF6 /* TPDelegateMatrioska.m in Sources */,
 				18F4DCA71DF5601300C0DC38 /* TrainExamListViewController.m in Sources */,
 				18214B7D1DF6666F00ACF275 /* UINavigationController+ZFPlayerRotation.m in Sources */,
 				1825DF201DF1827E008A0FC3 /* TrainBaseNavBarController.m in Sources */,
 				18214B4B1DF6604400ACF275 /* TrainGroupAndTopicModel.m in Sources */,
 				1821CB441E4962CF003E1A3D /* TrainMovieDetailTableViewController.m in Sources */,
+				8477301520CAD8D100DF7A41 /* TrainNewClassListTableViewCell.m in Sources */,
 				18214B791DF6666F00ACF275 /* TrainPlayerControlView.m in Sources */,
+				840CF90F20D7B28900688FCC /* TrainClassExamCell.m in Sources */,
 				1825DF211DF1827E008A0FC3 /* TrainBaseTableView.m in Sources */,
 				18F4DC741DF55C5600C0DC38 /* TrainClassDetailViewController.m in Sources */,
 				184C233B1E25C97500C831C6 /* TrainDownloadFinishCell.m in Sources */,
@@ -3235,6 +3462,7 @@
 				18F4DC5D1DF5460300C0DC38 /* TrainUserInfo.m in Sources */,
 				18FD226A1DF7A9370085174D /* TrainUnfoldView.m in Sources */,
 				18F4DCCC1DF5614B00C0DC38 /* TrainTopicDetailViewController.m in Sources */,
+				840944FF20DE125400FC5DF6 /* WMStickyPageViewController.m in Sources */,
 				18CA261C1E516791004D4A2A /* UIViewController+TrainNavigationExtension.m in Sources */,
 				18F4DCB11DF5612300C0DC38 /* TrainGroupAndTopicListViewController.m in Sources */,
 				188EAFC71E1DE593009DD9FE /* TrainNewsListViewController.m in Sources */,
@@ -3360,22 +3588,22 @@
 				APP_NAME = "学佳";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing JIDI Technology Co., Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing JIDI Technology Co., Ltd.";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 4R6FDKKS4M;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73D7BETCY2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KindeeTrain",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KindeeTrain/TrainMacro/TrainPrefix.pch";
 				INFOPLIST_FILE = KindeeTrain/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.kindee.newLearnPlus;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.kindee.newLearnPlusTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cf3f8b1c-2a0e-4147-8410-ea49db98278e";
-				PROVISIONING_PROFILE_SPECIFIER = NewApplearnPlus;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = "-Wno-documentation";
 			};
@@ -3388,22 +3616,22 @@
 				APP_NAME = "学佳";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing JIDI Technology Co., Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing JIDI Technology Co., Ltd.";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 4R6FDKKS4M;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73D7BETCY2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KindeeTrain",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KindeeTrain/TrainMacro/TrainPrefix.pch";
 				INFOPLIST_FILE = KindeeTrain/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.kindee.newLearnPlus;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.kindee.newLearnPlusTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cf3f8b1c-2a0e-4147-8410-ea49db98278e";
-				PROVISIONING_PROFILE_SPECIFIER = NewApplearnPlus;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = "-Wno-documentation";
 			};

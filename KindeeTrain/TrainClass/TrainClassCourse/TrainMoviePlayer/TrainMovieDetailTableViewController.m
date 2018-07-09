@@ -28,7 +28,7 @@
 
 #import "TrainNodataView.h"
 #import "UITableView+TrainTableViewPlaceHolder.h"
-
+#import "WMStickyPageViewController.h"
 static NSString *const kDirectoryIdentifier = @"kDirectoryIdentifier";
 static NSString *const kNoteIdentifier      = @"kNoteIdentifier";
 static NSString *const kDiscussIdentifier   = @"kDiscussIdentifier";
@@ -36,7 +36,7 @@ static NSString *const kAppraiseIdentifier  = @"kAppraiseIdentifier";
 
 #define TRAINDOWNHEIGHT  50.0f
 
-@interface TrainMovieDetailTableViewController ()<TrainFileDownloadManagerDelegate,trainAppraiseDelegate,trainNoteDelegate,UITextViewDelegate>
+@interface TrainMovieDetailTableViewController ()<TrainFileDownloadManagerDelegate,trainAppraiseDelegate,trainNoteDelegate,UITextViewDelegate,WMStickyPageViewControllerDelegate>
 {
     // shuju
     NSMutableArray             *hourMuArr, *noteMuArr, *discussMuArr, *AppraiseMuArr;
@@ -58,7 +58,7 @@ static NSString *const kAppraiseIdentifier  = @"kAppraiseIdentifier";
     
     
     int                             currIndex; // 刷新的当前页数
-    __block TrainNodataView *netReloader ;
+    __block TrainNodataView         *netReloader ;
     NSIndexPath                     *commentSelect;
     NSInteger                       currHourIndex; // 当前课时的
     NSInteger                       selectIndex; // 当前选中课时的
@@ -86,8 +86,6 @@ static NSString *const kAppraiseIdentifier  = @"kAppraiseIdentifier";
     self.tableView.tableFooterView = [[UIView alloc]init];
     self.tableView.separatorStyle =UITableViewCellSeparatorStyleNone;
     
-//    self.tableView.backgroundColor = [UIColor brownColor];
-    
     [self.tableView registerClass:[TrainCourseAppraiseCell class] forCellReuseIdentifier:kAppraiseIdentifier];
     [self.tableView registerClass:[TrainCourseDiscussCell class] forCellReuseIdentifier:kDiscussIdentifier];
     [self.tableView registerClass:[TrainCourseNoteCell class] forCellReuseIdentifier:kNoteIdentifier];
@@ -101,7 +99,6 @@ static NSString *const kAppraiseIdentifier  = @"kAppraiseIdentifier";
             currIndex  = 1 ;
             [weakself downloadCourseInfo:1];
         }];
-        //        [self.tableView.mj_header beginRefreshing];
         MJRefreshBackNormalFooter  *footer =[MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
             currIndex ++;
             [weakself downloadCourseInfo:currIndex];
@@ -127,7 +124,11 @@ static NSString *const kAppraiseIdentifier  = @"kAppraiseIdentifier";
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [self removeNoteOrCommentDownView];
+   
+    if(self.courseMode == TrainCourseDetailModeNote){
+        [self removeNoteOrCommentDownView];
+
+    }
     if (self.downManager) {
         self.downManager.delegate = nil;
     }
@@ -146,6 +147,11 @@ static NSString *const kAppraiseIdentifier  = @"kAppraiseIdentifier";
         NSMutableArray *muArr = [NSMutableArray arrayWithArray:arr];
         self.downLoadMuArr = muArr;
     }
+    if(self.courseMode == TrainCourseDetailModeNote){
+        [self creatCourseDetailNoteView];
+        
+    }
+    
 }
 
 -(void)resetStartDownload{
@@ -720,8 +726,7 @@ static NSString *const kAppraiseIdentifier  = @"kAppraiseIdentifier";
         
     }
     
-    [self.view addSubview:noteDownView];
-    
+//    [self.view addSubview:noteDownView];
 
     UIWindow  *keywindow =[UIApplication sharedApplication].keyWindow;
     
@@ -2033,7 +2038,10 @@ static NSString *const kAppraiseIdentifier  = @"kAppraiseIdentifier";
     
 }
 
-
+#pragma mark - WMStickyPageViewControllerDelegate
+- (UIScrollView *)stretchScrollView {
+    return self.tableView;
+}
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     

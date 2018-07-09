@@ -129,5 +129,6 @@
 @property(nonatomic,copy) NSString   *mphoto;
 @property(nonatomic,copy) NSString   *audit_status;
 @property(nonatomic,assign) BOOL    isOpen;
+@property(nonatomic,assign) BOOL    ismy;
 @property(nonatomic,assign,readonly)  BOOL  isShowButton;
 @end

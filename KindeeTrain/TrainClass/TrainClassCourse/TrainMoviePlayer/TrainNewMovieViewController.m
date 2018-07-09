@@ -10,7 +10,7 @@
 
 #import "TrainIntroductionViewController.h"
 #import "TrainMovieDetailTableViewController.h"
-#import "WMPanGestureRecognizer.h"
+//#import "WMPanGestureRecognizer.h"
 
 #import "TrainCourseDetailModel.h"
 #import "TrainClassMenuView.h"
@@ -30,11 +30,10 @@
 
 #define  TRAINDOWNHEIGHT   50
 
-typedef NS_ENUM(NSInteger, WMPageScrollStatus){
-    WMPageScrollStatusNULL,
-    WMPageScrollStatusUP,
-    WMPageScrollStatusDOWN
-};
+static CGFloat const kWMMovieHeaderViewHeight = 200;
+static CGFloat const kWMMovieMenuViewHeight = 44.0;
+
+
 
 @interface TrainNewMovieViewController ()<UIGestureRecognizerDelegate,TrainPlayerDelegate,TrainMovieDetailDelegate>
 {
@@ -51,13 +50,7 @@ typedef NS_ENUM(NSInteger, WMPageScrollStatus){
     
     NSDictionary                    *coursIntroDic;
     
-//    NSMutableArray                  *hourMuArr, *noteMuArr, *discussMuArr, *AppraiseMuArr;
-//    UIView                          *fiveBgView, *downView, *freeSizeView;
-//    TrainImageButton                *deleteBtn;
-//    
-//    UILabel                         *courseTitleLab, *learnNumLab, *courseGradeLab,
-//    *peopleContentLab, *tagertContentLab;
-//    TrainUnfoldView                 *courseGaiContentLab;
+
     
     CGFloat                         footViewHeight;
 
@@ -92,7 +85,7 @@ typedef NS_ENUM(NSInteger, WMPageScrollStatus){
 @property (nonatomic, assign) CGFloat viewTop;
 
 @property (nonatomic, strong) NSArray *musicCategories;
-@property (nonatomic, strong) WMPanGestureRecognizer *panGesture;
+//@property (nonatomic, strong) WMPanGestureRecognizer *panGesture;
 @property (nonatomic, assign) CGPoint lastPoint;
 @property (nonatomic, assign) WMPageScrollStatus     scrollStatus;
 @property (nonatomic, assign) BOOL     isDrag;
@@ -102,9 +95,7 @@ typedef NS_ENUM(NSInteger, WMPageScrollStatus){
 @property (nonatomic, strong) NSString              *lastcw_id;
 @property (nonatomic, strong) TrainPlayerView       *playerView;
 @property (nonatomic, strong) TrainPlayerModel      *playerModel;
-//@property (nonatomic, strong) TrainDownloadManager  *downManager;
 @property (nonatomic, strong) NSMutableArray        *downLoadMuArr;
-//@property (nonatomic, strong) NSTimer               *downReloadCellTimer;
 
 
 @end
@@ -130,12 +121,16 @@ typedef NS_ENUM(NSInteger, WMPageScrollStatus){
         self.pageAnimatable    = NO;
         self.menuViewStyle     = WMMenuViewStyleLine;
         self.menuItemWidth = [UIScreen mainScreen].bounds.size.width / self.musicCategories.count;
-        self.menuHeight = TrainCLASSHEIGHT;
+//        self.menuHeight = TrainCLASSHEIGHT;
         self.viewTop = TrainNavorigin_y + TrainMovieHeight;
         self.titleColorSelected = TrainMenuSelectColor;
         self.titleColorNormal = TrainTitleColor;
-//        self.preloadPolicy = WMPageControllerPreloadPolicyNeighbour ;
-        self.scrollEnable = NO;
+//        self.scrollEnable = NO;
+        self.menuViewHeight     = kWMMovieMenuViewHeight;
+        self.headerViewHeight   = TrainMovieHeight ;
+        self.minimumTopInset    = 0;
+        self.scrollEnable       = NO ;
+        
     }
     return self;
 }
@@ -193,8 +188,6 @@ typedef NS_ENUM(NSInteger, WMPageScrollStatus){
     }
     [self creatHeaderMovieView];
     
-    self.panGesture = [[WMPanGestureRecognizer alloc] initWithTarget:self action:@selector(panOnView:)];
-    [self.view addGestureRecognizer:self.panGesture];
     [TrainNotiCenter addObserver:self selector:@selector(networkStatusChange:) name:kReachabilityChangedNotification object:nil];
     
 //    [self registeNotifications];
@@ -521,85 +514,61 @@ typedef NS_ENUM(NSInteger, WMPageScrollStatus){
         lastHourLab.text = @"";
         lastHourLab.userInteractionEnabled = NO;
     }
-    
-    
 }
 
-- (void)panOnView:(WMPanGestureRecognizer *)recognizer {
+#pragma mark - Datasource & Delegate
+- (NSInteger)numbersOfChildControllersInPageController:(WMPageController *)pageController {
+    return self.musicCategories.count;
+}
 
-    if (self.fixedHeadView) {
-        return;
+- (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index {
+    
+    if (index == 0) {
+        TrainIntroductionViewController  *introdVC =[[TrainIntroductionViewController alloc]init];
+        introdVC.delegate = self;
+        
+        return introdVC;
     }
     
-    CGPoint currentPoint = [recognizer locationInView:self.view];
-    UIScrollView   *scroll = nil;
-    if ([self.currentViewController isKindOfClass:[TrainMovieDetailTableViewController class]]) {
-       TrainMovieDetailTableViewController *tableVC = (TrainMovieDetailTableViewController *)self.currentViewController;
-        scroll = tableVC.tableView;
-    }else if([self.currentViewController isKindOfClass:[TrainIntroductionViewController class]]){
-        TrainIntroductionViewController *introdVC = (TrainIntroductionViewController *)self.currentViewController;
-        scroll = introdVC.introScrollView;
-    }
+    TrainMovieDetailTableViewController *movieVC =[[TrainMovieDetailTableViewController alloc]init];
+    movieVC.courseDetailModel = self.courseModel;
+    movieVC.courseMode  = index;
+    movieVC.delegate    = self;
+
+    return movieVC;
+}
+
+- (NSString *)pageController:(WMPageController *)pageController titleAtIndex:(NSInteger)index {
+    return self.musicCategories[index];
+}
+
+-(void)pageController:(WMPageController *)pageController didEnterViewController:(__kindof UIViewController *)viewController withInfo:(NSDictionary *)info{
+
+    NSInteger  index = [info[@"index"] integerValue];
     
-    if (recognizer.state == UIGestureRecognizerStateBegan) {
-        self.isDrag = YES;
-        self.lastPoint = currentPoint;
-    } else if (recognizer.state == UIGestureRecognizerStateEnded) {
-        self.isDrag = NO;
-        CGPoint velocity = [recognizer velocityInView:self.view];
-        CGFloat targetPoint = velocity.y < 0 ? TrainNavorigin_y : TrainNavorigin_y + TrainMovieHeight;
-        NSTimeInterval duration = fabs((targetPoint - self.viewTop) / velocity.y);
-        
-        if (fabs(velocity.y) * 1.0 > fabs(targetPoint - self.viewTop)) {
-            
-            [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-                
-                if (self.scrollStatus == WMPageScrollStatusUP) {
-                    self.viewTop = targetPoint;
-                    
-                }else{
-                    float  off_y =scroll.contentOffset.y;
-                    if (off_y <= 0) {
-                        self.viewTop = targetPoint;
-                    }
-                }
-            } completion:nil];
-            
-            return;
-        }
-        
-    }else if (recognizer.state == UIGestureRecognizerStateChanged){
-        CGFloat yChange = currentPoint.y - self.lastPoint.y;
-        float  off_y = scroll.contentOffset.y;
-        
-        if(yChange > 0){
-            self.scrollStatus = WMPageScrollStatusDOWN;
-            if (off_y <= 0) {
-                
-                self.viewTop += yChange;
-            }
-            
-        }else{
-            self.scrollStatus = WMPageScrollStatusUP;
-            
-            if (_viewTop > 64 ) {
-                if (off_y > 30) {
-                     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-                            self.viewTop  = TrainNavorigin_y;
-                     } completion:nil];
+    BOOL  aa = (index == 2 || index == 3 );
+    footViewHeight = ( aa  && isRegister)?50:0;
 
-                }else{
-                    self.startDragging = YES;
-
-                    [scroll setContentOffset:CGPointZero animated:NO];
-                }
-            }
-            self.viewTop += yChange;
+    self.downInset = footViewHeight ;
+    if (index == 0) {
+        TrainIntroductionViewController  *introdVC = (TrainIntroductionViewController *)viewController;
+        [introdVC updateDataWith: coursIntroDic[@"course"]];
+    }else{
+        
+        TrainMovieDetailTableViewController *movieVC = (TrainMovieDetailTableViewController *)viewController;
+        movieVC.isRegister = isRegister;
+        movieVC.delegate    = self;
+        movieVC.courseDetailModel = self.courseModel ;
+        [movieVC updateDataWithVC];
+        if (index == 1) {
+            movieVC.defaultImageURL = coursIntroDic[@"course"][@"picture"];
+            [movieVC updateLearningRecord:currenthourModel andreload:YES];
 
         }
     }
-    self.lastPoint = currentPoint;
+
 }
+
 -(void)WMTableviewSelect:(TrainCourseDirectoryModel *)hourModel {
     
     TrainCourseDirectoryModel  *listModel = hourModel;
@@ -610,111 +579,6 @@ typedef NS_ENUM(NSInteger, WMPageScrollStatus){
     }
     
 }
-
--(void)scrollDidScrollStop:(CGFloat)off_y{
-    
-    if (_fixedHeadView ) {
-        return;
-    }
-    
-    if (off_y <= 0 && self.scrollStatus == WMPageScrollStatusDOWN && self.isDrag == NO) {
-        
-        [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            
-            self.viewTop =  TrainNavorigin_y + TrainMovieHeight;
-            
-        } completion:nil];
-    }
-    
-}
-
-// MARK: ChangeViewFrame (Animatable)
-- (void)setViewTop:(CGFloat)viewTop {
-    
-    _viewTop = viewTop;
-    
-    if (_viewTop <= TrainNavorigin_y) {
-        _viewTop = TrainNavorigin_y;
-    }
-    
-    if (_viewTop > TrainMovieHeight + TrainNavorigin_y) {
-        _viewTop = TrainMovieHeight + TrainNavorigin_y;
-    }
-    CGRect  size = movieBgView.frame;
-    size.origin.y = _viewTop - TrainMovieHeight;
-    movieBgView.frame = size;
-    
-    self.viewFrame = CGRectMake(0, _viewTop,TrainSCREENWIDTH, TrainSCREENHEIGHT -TrainNavHeight - _viewTop - footViewHeight );
-}
-
-
-#pragma mark - Datasource & Delegate
-- (NSInteger)numbersOfChildControllersInPageController:(WMPageController *)pageController {
-    return self.musicCategories.count;
-}
-
-- (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index {
-    
-    TrainNSLog(@"----index ---%zi",index);
-    if (index == 0) {
-        TrainIntroductionViewController  *introdVC =[[TrainIntroductionViewController alloc]init];
-        introdVC.delegate = self;
-        
-        return introdVC;
-    }
-    
-    TrainMovieDetailTableViewController *movieVC =[[TrainMovieDetailTableViewController alloc]init];
-    movieVC.delegate    = self;
-    movieVC.courseDetailModel = self.courseModel;
-    movieVC.courseMode  = index;
-
-    return movieVC;
-}
-
-- (NSString *)pageController:(WMPageController *)pageController titleAtIndex:(NSInteger)index {
-    return self.musicCategories[index];
-}
-//-(void)pageController:(WMPageController *)pageController willEnterViewController:(__kindof UIViewController *)viewController withInfo:(NSDictionary *)info{
-//    NSInteger  index = [info[@"index"] integerValue];
-//   
-//
-//    if (index == 0) {
-//        
-//    }else{
-//        
-//        TrainMovieDetailTableViewController *movieVC = (TrainMovieDetailTableViewController *)viewController;
-//        movieVC.isRegister = isRegister;
-//    }
-//
-//}
--(void)pageController:(WMPageController *)pageController didEnterViewController:(__kindof UIViewController *)viewController withInfo:(NSDictionary *)info{
-    NSLog(@"didenter -- %@",info);
-    NSInteger  index = [info[@"index"] integerValue];
-    
-    BOOL  aa = (index == 2 || index == 3 );
-    footViewHeight = ( aa  && isRegister)?50:0;
-
-    self.viewFrame = CGRectMake(0, _viewTop,TrainSCREENWIDTH, TrainSCREENHEIGHT - _viewTop -footViewHeight);
-    
-    if (index == 0) {
-        TrainIntroductionViewController  *introdVC = (TrainIntroductionViewController *)viewController;
-        [introdVC updateDataWith: coursIntroDic[@"course"]];
-    }else{
-        
-        TrainMovieDetailTableViewController *movieVC = (TrainMovieDetailTableViewController *)viewController;
-        movieVC.isRegister = isRegister;
-        
-        [movieVC updateDataWithVC];
-
-        if (index == 1) {
-            movieVC.defaultImageURL = coursIntroDic[@"course"][@"picture"];
-            [movieVC updateLearningRecord:currenthourModel andreload:YES];
-
-        }
-    }
-
-}
-
 
 #pragma mark - 播放视频
 
@@ -863,6 +727,7 @@ typedef NS_ENUM(NSInteger, WMPageScrollStatus){
         movieDefaultView = nil;
         TrainPlayerControlView *controlView = [[TrainPlayerControlView alloc] init];
         [self.playerView playerControlView:controlView playerModel:self.playerModel];
+       
         
     }
     self.playerModel.isFinish = ([hourModel.ua_status isEqualToString:@"C"]) ? YES : NO;
@@ -1069,9 +934,10 @@ typedef NS_ENUM(NSInteger, WMPageScrollStatus){
 -(void)setFixedHeadView:(BOOL)fixedHeadView{
     _fixedHeadView = fixedHeadView;
 
-    if (_fixedHeadView) {
-        self.viewTop =  TrainNavorigin_y + TrainMovieHeight;
-    }
+    self.disableSticky = fixedHeadView ;
+//    if (_fixedHeadView) {
+//        self.viewTop =  TrainNavorigin_y + TrainMovieHeight;
+//    }
 }
 
 

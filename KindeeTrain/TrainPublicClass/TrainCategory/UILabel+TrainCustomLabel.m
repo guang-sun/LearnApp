@@ -38,7 +38,7 @@
     self = [super init];
     if (self) {
         self.font = [UIFont systemFontOfSize: trainAutoLoyoutTitleSize(TrainTitleFont)];
-        self.numberOfLines =0;
+        self.numberOfLines = 0;
         self.textColor = [UIColor grayColor];
     }
     return self;

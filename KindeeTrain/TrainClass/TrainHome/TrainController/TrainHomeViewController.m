@@ -30,6 +30,7 @@
 #import "TrainCourseDetailModel.h"
 #import "TrainLocalLearnRecord.h"
 #import <SDCycleScrollView.h>
+#import "TrainNewClassListViewController.h"
 
 #define IMAGESCROLLHEIGHT   TrainSCREENWIDTH * 1.0 / 2.0
 #define IMAGESCROLLTIME     5.0f
@@ -500,13 +501,21 @@
         [self.navigationController pushViewController:cacheVC animated:YES];
         
         
-    }else  if ([keyStr  isEqualToString:@"COURSE"] || [keyStr  isEqualToString:@"CLASS"]) {
+    }else  if ([keyStr  isEqualToString:@"COURSE"]) {
         
         TrainCourseClassViewController *courseVC = [[TrainCourseClassViewController alloc]init];
         courseVC.courseMode =([keyStr  isEqualToString:@"CLASS"])?TrainModeMyClass: TrainModeMyCourse;
         courseVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:courseVC animated:YES];
         
+    }else if( [keyStr  isEqualToString:@"CLASS"]){
+        
+        TrainNewClassListViewController *courseVC = [[TrainNewClassListViewController alloc]init];
+        courseVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:courseVC animated:YES];
+//        TrainNavigationController *nav =[[TrainNavigationController alloc]initWithRootViewController:[NSClassFromString(@"TrainNewClassListViewController") new]];
+//        [self.navigationController pushViewController:courseVC animated:YES];
+//
     }else  if ([keyStr  isEqualToString:@"SHARE"]) {
         
         TrainDocumentListViewController   *docVC =[[TrainDocumentListViewController alloc]init];

@@ -256,11 +256,13 @@ static TrainNetWorkConfiguration *defaultConfiguration = nil;
     return @"/appws/user/delComment.action";
 }
 
+
+
 /**
  * 班级课程  删除评价
  */
 +(NSString *)trainClassCourseDeleteAppraise{
-    return @"/appws/user/delClassCourseComment.action";
+    return @"/appws/user/delClassComment.action";
 }
 
 /**
@@ -308,6 +310,65 @@ static TrainNetWorkConfiguration *defaultConfiguration = nil;
 +(NSString *)trainClass{
     return @"/appws/user/getClassList.action";
 }
+
+
+/**
+ * 班级 成绩策略
+ */
++(NSString *)trainClassGradeInfo{
+    return @"/appws/user/getClassTactic.action";
+}
+
+/**
+ * 获取班级阶段
+ */
++(NSString *)trainClassPhaseInfo{
+    return @"/appws/user/getClassJdList.action";
+}
+
+/**
+ * 获取阶段资源
+ */
++(NSString *)trainClassPhaseRes{
+    return @"/appws/user/getClassJdRes.action";
+}
+
+/**
+ * 获取阶段课时
+ */
++(NSString *)trainClassPhaseHourList{
+    return @"/appws/user/getHourList.action";
+}
+
+
+/**
+ * 班级评论列表
+ */
++(NSString *)trainClassCommendList{
+    return @"/appws/user/getClassComment.action";
+}
+
+/**
+ * 添加班级评价
+ */
++(NSString *)trainAddClassCommend{
+    return @"/appws/user/addClassComment.action";
+}
+
+
+/**
+ * 班级 详情 更多学员
+ */
++(NSString *)trainClassAllMates{
+    return @"/appws/user/getClassStudents.action";
+}
+/**
+ * 班级 收藏
+ */
++(NSString *)trainClassCollect{
+    return @"/appws/user/classFav.action";
+}
+
 
 /**
  * 班级 课程list

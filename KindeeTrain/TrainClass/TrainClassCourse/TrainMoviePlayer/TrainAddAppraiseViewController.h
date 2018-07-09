@@ -18,6 +18,9 @@
 
 /**type room_id hour_id  object_id  c_id */
 @property(nonatomic, strong) NSDictionary               *infoDic;
+@property(nonatomic, assign) BOOL                     isclass ;
+@property(nonatomic, copy) NSString                     *class_id ;
+
 @property(nonatomic, assign) id<trainAppraiseDelegate>  delegate;
 
 @end

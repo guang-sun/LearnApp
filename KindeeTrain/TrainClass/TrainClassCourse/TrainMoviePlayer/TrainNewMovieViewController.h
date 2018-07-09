@@ -8,10 +8,17 @@
 
 #import "WMPageController.h"
 #import "TrainCourseAndClassModel.h"
+#import "WMStickyPageViewController.h"
 
-//static CGFloat const kNavigationBarHeight = 64;
 
-@interface TrainNewMovieViewController : WMPageController
+typedef NS_ENUM(NSInteger, WMPageScrollStatus){
+    WMPageScrollStatusNULL,
+    WMPageScrollStatusUP,
+    WMPageScrollStatusDOWN
+};
+
+@interface TrainNewMovieViewController : WMStickyPageViewController
+
 @property(nonatomic, strong) NSDictionary               *courseDic;
 @property(nonatomic, strong) TrainCourseAndClassModel   *courseModel;
 
